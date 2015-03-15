@@ -35,7 +35,7 @@ Afin que ce template s'adapte à vos besoins, il est conseillé d'apporter quelq
 
 ###Licences###
   - AlbinoMouse est disponible sous [licence GPLv3] (inc/albinomouse-licence.txt)
-  - Glyphicons Halflings (http://getbootstrap.com): [MIT Licence] (inc/font/glyphicon-licence.txt)
+  - Glyphicons Halflings (http://getbootstrap.com) : [MIT Licence] (inc/fonts/glyphicon-licence.txt)
   - OpenSans (http://opensans.com) : [Apache Licence version 2.0] (inc/fonts/opensans-license.txt)
 
 ###Crédit###
