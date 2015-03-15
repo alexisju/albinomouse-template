@@ -1,0 +1,26 @@
+<div id="menu">
+    <span id="bonjourshaarli" class="nomobile">a déjà partagé {if="!empty($linkcount)"}{$linkcount}{/if} liens!</span>
+    <span id="shaarli_title"><a href="?">{$shaarlititle|htmlspecialchars}</a></span>
+{if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
+    <style TYPE="text/css">#pageheader {margin-top:-10px} #menu {height: 100px;} #bonjourshaarli{display:none;}</style>
+	{ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
+{else}
+    
+    <a id="activeLinklist" href="?"><i class="glyphicon glyphicon-star"></i> shaarli</a>
+    <a href="#"><i class="glyphicon glyphicon-bullhorn"></i> link 1</a>
+    <a href="#"><i class="glyphicon glyphicon-align-justify"></i> link 2</a>
+    <a href="#" class="cachemoi"><i class="glyphicon glyphicon-info-sign"></i> link 3</a>
+    <a href="#" class="cachemoi"><i class="glyphicon glyphicon-envelope"></i> link 4</a>
+  {if="isLoggedIn()"}
+    <style TYPE="text/css">.cachemoi {display:none;}</style>
+    <a id="activeAddlink" href="?do=addlink"><i class="glyphicon glyphicon-link"></i>  nouveau lien</a>
+    <a id="activeOptions" href="?do=tools"><i class="glyphicon glyphicon-wrench"></i> options</a>
+    <a href="?do=logout"><i class="glyphicon glyphicon-log-out"></i> logout</a>
+    {elseif="$GLOBALS['config']['OPEN_SHAARLI']"}
+    <a id="activeOptions" href="?do=tools">options</a><a href="?do=addlink"><i class="glyphicon glyphicon-link"></i> nouveau lien</a>
+  {else}
+    <a id="activeLogin" href="?do=login"><i class="glyphicon glyphicon-log-in"></i> login</a>
+  {/if}
+{/if}
+</div>
+<div class="clear"></div>
