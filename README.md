@@ -30,8 +30,6 @@ Important : Pour l'utiliser ce template, vous devez utiliser la [version communa
 Afin que ce template s'adapte à vos besoins, il est conseillé d'apporter quelques modifications manuellement, après l'installation d'Albinomouse:
  - page.header.html : personnalisation des boutons de navigations. Ils sont destinés à renvoyer vers des url externes (vers votre blog, vers votre page de contact, etc). Utilisez [Glyphicon] (http://getbootstrap.com/components/#glyphicons) pour personaliser les icônes. 
  Remarque : certains de ces boutons sont masqués lorsque vous êtes connecté à Shaarli (classe CSS "cachemoi") pour laisser place à d'autres options utiles. 
- - linklist.html : personnalisation des options de partages : vous pouvez indiquer votre compte Twitter et l'url de votre blog sous Wordpress. 
- Remarque : le lien vers l'éditeur Wordpress n'apparait que lorsque vous êtes connecté à Shaarli.
 
 ###Licences###
   - AlbinoMouse est disponible sous [licence GPLv3] (inc/albinomouse-licence.txt)
