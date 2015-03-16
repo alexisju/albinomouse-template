@@ -1,7 +1,7 @@
 ﻿/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli        */
 /* Thème : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)      */
 /*                                                                              */
-/* Version : 20150315                                                           */
+/* Version : 20150316                                                           */
 /*                                                                              */
 
 
@@ -248,15 +248,38 @@ width: 100%;
     text-align: center;
 }
 
-.paging a:link { color:#777777; text-decoration:none;}
-.paging a:visited { color:#777777;  }
-.paging a:hover {  color:#c93030;  }
-.paging a:active { color:#c93030;  }
-#paging_mode { float:none;position:absolute; }
-#paging_linksperpage { float:right; padding-right:5px; }
-#paging_current { display:inline; color:#777777; padding:0px; }
-#paging_older { margin-right:15px; }
-#paging_newer { margin-left:15px; }
+.paging a:link { 
+    color:#777777; 
+    text-decoration:none;
+}
+.paging a:visited { 
+    color:#777777;  
+}
+.paging a:hover {  
+    color:#c93030;  
+}
+.paging a:active { 
+    color:#c93030;  
+}
+#paging_mode { 
+    float:none;
+    position:absolute; 
+}
+#paging_linksperpage { 
+    float:right; 
+    padding-right:5px; 
+}
+#paging_current { 
+    display:inline; 
+    color:#777777; 
+    padding:0px; 
+}
+#paging_older { 
+    margin-right:10px; 
+}
+#paging_newer { 
+    margin-left:10px; 
+}
 
 #formcontainer, #install {                             /*AM nouveau #id CSS */
   width:980px;
@@ -321,23 +344,19 @@ width: 100%;
     margin-bottom: 60px;
     font-size:10pt!important;
 }
-
 .lf_input,#editlinkform textarea {
 width:530px;
 }
-
 #lf_private {
     margin:10px 0 10px 2px;
+    
 }
-
 .bigbutton[name="save_edit"] {
     margin-top:10px;
 }
-
 .bigbutton[name="cancel_edit"] {
     margin-left:10px;
 }
-
 .bigbutton[name="delete_link"] {
     margin-left:365px;
 }
@@ -346,23 +365,21 @@ width:530px;
     margin: 20px auto;                                       /*AM*/
     width: 980px!important;
 }
-
 #linklist li {
     border-bottom: 1px solid #E0E2E2;                       /*AM*/
     margin: 5px 10px;
     padding: 10px 0 20px;
 }
-
 #partagesocial {
     position:relative;
     display:inline;
-    font-size:10pt;
+    font-size:9pt;
     vertical-align:-3px;
     color:#4C4B4A;
 }
 #partagesocial a, #partagesocial a:hover {
-color:#C93030;
-text-decoration:none;
+    color:#C93030;
+    text-decoration:none;
 }
 #linklist li.private {
     background-color:rgba(247, 247, 247, 0.54);
@@ -376,18 +393,32 @@ text-decoration:none;
     position: relative;
     top: 1px;
 }
-
 .private  .linktitle a {color:#969696;}
 .linktitle { 
     font-family:Open Sans,Sans-Serif;
     font-size:16pt;
     font-weight:500; 
 }
-.linktitle a { text-decoration: none; color:#C93030; }
-.linktitle a:hover { color:#4C4B4A; }
-.linkdate { font-size:9pt; color:#4C4B4A; }
-.linkdate a { padding:2px 0 3px 2px;background-repeat:no-repeat;text-decoration: none; color:#4C4B4A;  }
-.linkdate a:hover { color: #C93030; }
+.linktitle a { 
+    text-decoration: none; 
+    color:#C93030; 
+}
+.linktitle a:hover { 
+    color:#4C4B4A;
+}
+.linkdate { 
+    font-size:9pt; 
+    color:#4C4B4A; 
+}
+.linkdate a { 
+    padding:2px 0 3px 2px;
+    background-repeat:no-repeat;
+    text-decoration: none; 
+    color:#4C4B4A;
+}
+.linkdate a:hover { 
+    color: #C93030;
+}
 .linkurl a { 
     font-size:9pt; 
     color:#C93030;
@@ -401,18 +432,25 @@ text-decoration:none;
 .linkarchive a:hover {
     color:#C93030;
 }
-
-
-.linkdescription { color:#4C4B4A; margin-bottom:20px; font-weight:normal; max-height:400px; overflow:auto; font-size:11pt;}
-.linkdescription a { text-decoration: none; color:#3465A4; }
-.linkdescription a:hover { color:#C93030; }
-
-.linkqrcode {
-display: inline;
-position: relative;
+.linkdescription { 
+    color:#4C4B4A; 
+    margin-bottom:20px; 
+    font-weight:normal; 
+    max-height:400px; 
+    overflow:auto; 
+    font-size:11pt;
 }
-
-
+.linkdescription a {
+    text-decoration: none; 
+    color:#3465A4;
+}
+.linkdescription a:hover { 
+    color:#C93030;
+}
+.linkqrcode {
+    display: inline;
+    position: relative;
+}
 .linktaglist { padding-top:10px;}
 .linktag {
     font-size:9pt;
@@ -662,18 +700,10 @@ div.daily div.dailyDate span {
     display:none
 } 
 
-.linkeditbuttonsDaily, .linkeditbuttonsDaily input {
-    opacity:0.75;
-}
-.linkeditbuttonsDaily input:hover {
-    font-weight:bold;  
-    opacity:1;
-}
-
 /* Individual entries in "Daily": */
 div.dailyEntry{
     margin: 5px 10px 2px 5px;
-    font-size: 10pt;
+    font-size: 9pt;
     border-bottom: 1px solid #E0E2E2;
     padding-bottom: 6px;
 }
@@ -685,7 +715,7 @@ div.dailyEntry:hover {
     background-color:rgba(0, 0, 0, 0.04);
 }
 div.dailyEntryTags { 
-    font-size:7pt;  
+    font-size:9pt;  
     word-spacing:3px;
     padding: 5px 0px;
 }
@@ -706,10 +736,18 @@ div.dailyEntryThumbnail {
 }
 div.dailyEntryDescription { 
     margin-top: 10px;
-    margin-bottom: 30px; 
+    margin-bottom: 10px; 
     text-align:justify; 
     overflow:auto;
     color:#4C4B4A ;
+}
+.linkeditbuttonsDaily, .linkeditbuttonsDaily input {
+    opacity:0.75;
+    margin-top:5px;
+}
+.linkeditbuttonsDaily input:hover {
+    font-weight:bold;  
+    opacity:1;
 }
 
 
