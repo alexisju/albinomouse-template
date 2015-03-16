@@ -593,11 +593,16 @@ text-decoration: blink;
 	clear: left;
 }
 
-.thumbnail img { 
-    float:right;
+.thumbnail img{
+	background-color: #DDDDDD;
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+    float: right;
+    width: 120px;
+	height:90px;
     overflow: hidden;
-    padding: 1px;
     position: relative;
+    text-align: center;
     vertical-align: middle;
 }
 
@@ -613,11 +618,10 @@ text-decoration: blink;
     border-radius: 5px;
     display: table-cell;
     float: left;
-    height: 67px;
     width: 120px;
+	height:90px;
     margin: 8px;
     overflow: hidden;
-    padding: 1px;
     position: relative;
     text-align: center;
     vertical-align: middle;
@@ -637,7 +641,7 @@ text-decoration: blink;
 
 .picwall_pictureframe img {
     width: 100%;
-    height: 100%;
+    height: 100%!important;
 	border-radius:4px;
 }
 
@@ -654,11 +658,10 @@ text-decoration: blink;
 .picwall_pictureframe:hover span.info {
     word-wrap: break-word;
     display:block;
-    top:1px;
+    top:0px;
     position:absolute;
     height:100%;
-    width: 100%;
-    padding:5px;
+    padding:4px;
     font-size:7pt;
     color:#606060;
     text-align: left;
@@ -1018,13 +1021,7 @@ div.qrcode {
 div.dailyDate {
     margin-top: 123px;
 }
-#datepicker {
-    display:none;
-}
-.ui-datepicker-trigger {
-    margin-right:5px;
-    vertical-align: middle;
-}
+
 #paging_newer {
     float:right;
 }
