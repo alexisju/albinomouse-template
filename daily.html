@@ -16,9 +16,9 @@
     <div class="dailyDate"><span class="nomobile">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span><a href="?do=daily">{$day}</a> <span class="nomobile">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span></div>
     <div id="dailyPaging">
     <div id="paging_mode">
-    vue : <a href="?" alt="Linklist">liste</a> | <a href="?do=daily" alt="Daily">daily</a> | <a href="?do=tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}">images</a></div>
-	{if="$previousday"} <a href="?do=daily&amp;day={$previousday}"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;&nbsp; jour précédent</a>{else}{/if} &nbsp;  &nbsp; {if="$nextday"}<a href="?do=daily&amp;day={$nextday}">jour suivant &nbsp;&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i></a>{else}{/if}
-	  <div class="dailyRSS" style="float:right;"><a href="?do=dailyrss" title="1 RSS entry per day">daily rss</a> | <a href="{$feedurl}?do=rss{$searchcrits}" title="RSS ">full rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} / <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a>{/if}</div></div>
+    <a href="?" alt="Linklist">liste</a> | <a href="?do=daily" alt="Daily">daily</a> | <a href="?do=tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" title="RSS ">rss</a> (<a href="?do=dailyrss" title="1 RSS entry per day">daily</a>){if="$GLOBALS['config']['SHOW_ATOM']"} / <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a>{/if}</div>
+	{if="$previousday"} <a href="?do=daily&amp;day={$previousday}"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;&nbsp; jour précédent</a>{else}{/if} {if="$nextday"} &nbsp;-&nbsp; <a href="?do=daily&amp;day={$nextday}">jour suivant &nbsp;&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i></a>{else}{/if}
+	 </div>
 	  
     <div style="clear:both;"></div>
     

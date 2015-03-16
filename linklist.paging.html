@@ -1,15 +1,12 @@
 <div class="paging">
 
-    <div id="paging_mode" class="nomobile">
-    vue : <a href="?" alt="Linklist">liste</a> {if="isLoggedIn()"}<a href="?privateonly">
-		{if="$privateonly"}(tous){else}(privés){/if}</a>{/if} | <a href="?do=daily" alt="Daily">daily</a> | <a href="?do=tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | 
-<a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a>{/if}
-
-    </div>
+<div id="paging_mode" class="nomobile">
+<a href="?" alt="Linklist">liste</a> {if="isLoggedIn()"}<a href="?privateonly">{if="$privateonly"}(tous les liens){else}(liens privés){/if}</a>{/if} | <a href="?do=daily" alt="Daily">daily</a> | <a href="?do=tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a>{/if}
+</div>
 
     <div id="paging_linksperpage">
-        liens par page : <a href="?linksperpage=20">20</a> | <a href="?linksperpage=50">50</a> | <a href="?linksperpage=100">100</a>
-        <form method="GET" style="display:inline;" class="linksperpage"><input type="text" name="linksperpage" size="2" style="height:15px;"></form>
+        <a href="?linksperpage=20">20</a> | <a href="?linksperpage=50">50</a> | <a href="?linksperpage=100">100</a> | 
+        <form method="GET" style="display:inline;" class="linksperpage"><input type="text" name="linksperpage" placeholder="150" size="3"></form>
     </div>
     {if="$previous_page_url"} <a href="{$previous_page_url}" id="paging_older">&nbsp;<i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;</a> {/if}
     <div id="paging_current">page {$page_current} / {$page_max} </div>

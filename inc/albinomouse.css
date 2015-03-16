@@ -160,7 +160,7 @@ width: 100%;
 .linksperpage {
     background-color: #FFFFFF;                            /*AM*/
     border: 1px solid #DDDDDD;
-    padding: 1px 3px;
+    padding: 0px;
 }
 
 .linksperpage input,.tagfilter input, .searchform input, .addform input{
@@ -256,7 +256,7 @@ width: 100%;
     clear: both;
     color: #777777;
     font-size: 10pt;
-    padding: 10px 0px;
+    padding: 10px 5px;
     text-align: center;
 }
 
@@ -276,10 +276,11 @@ width: 100%;
 #paging_mode { 
     float:none;
     position:absolute; 
+	margin-top:0px;
 }
 #paging_linksperpage { 
     float:right; 
-    padding-right:5px; 
+	margin-top:0px;
 }
 #paging_current { 
     display:inline; 
@@ -292,7 +293,6 @@ width: 100%;
 	top:2px;
 	font-size: 10pt;
 }
-
 
 #formcontainer {                             /*AM nouveau #id CSS */
   width:980px;
@@ -748,19 +748,23 @@ div.dailyDate a, div.dailyDate a:visited {
     color: #4C4B4A;
 }
 
+#dailyPaging #paging_mode  {
+	margin-top:0px;
+}
+
 #dailyPaging {
     text-decoration:none;
-    font-family:Open Sans,Sans;
+    font-family:Open Sans, sans-serif;
     font-size:10pt;
     color:#777777;
     text-align:center;
-    padding-bottom:15px;
+    padding-bottom:10px;
     border-bottom: 2px solid #E0E2E2;
 }
 
 #dailyPaging a,#dailyPaging a:visited{
     text-decoration:none;
-    font-family:Open Sans,Sans;
+    font-family:Open Sans,sans-serif;
     color:#777777;
 }
 #dailyPaging a:hover{
@@ -917,7 +921,9 @@ html {
     margin:0;
 }
 
-#logo { display:none; }
+#logo {
+	display:none;
+}
 #pageheader {
     margin-top: -10px;
 }
@@ -937,18 +943,12 @@ html {
     padding-bottom: 5px;
     position: relative;
     margin:5px 0;
-    width: 80%;
+    width: 90%;
 }
 #headerform input {
     width:100%;
 }
 
-.searchform, .tagfilter {
-  margin:5px 0 0 0;
-}
-.tagfilter {
-    margin-top:-20px;
-}
 #loginform {
     background-color: #FFFFFF;
     clear: both;
@@ -971,16 +971,15 @@ html {
 }
 #paging_linksperpage {display:none;}
 
-.searchform {margin-bottom:10px;}
+.searchform {margin-bottom:5px;}
 .searchform, .tagfilter {
-    display: block !important;
-    margin: 0px 3px 7px 0px !important;
-    padding: 0px !important;
-    width: 97% !important;
+    margin: 0px!important;
+    padding: 8px !important;
+    width: 100% !important;
 }
 .searchform input, .tagfilter input {
-    margin: 0px !important;
-    padding: 0px !important;
+    margin: 6px !important;
+    padding: 6px !important;
     display: inline !important;
 }
 .tagfilter input.bigbutton, .searchform input.bigbutton, .addform input.bigbutton {
@@ -988,10 +987,10 @@ html {
     font-size: smaller;
 }
 #searchform_value {
-    width: 70% !important;
+    width: 95% !important;
 }
 #tagfilter_value {
-    width: 70% !important;
+    width: 95% !important;
 }
 div.qrcode {
     position: relative;
@@ -1021,6 +1020,13 @@ div.qrcode {
 div.dailyDate {
     margin-top: 123px;
 }
+#paging_current { 
+	font-size: 14pt;
+}
+
+#paging_older i ,#paging_newer i{ 
+	font-size: 14pt;
+}
 
 #paging_newer {
     float:right;
@@ -1028,6 +1034,8 @@ div.dailyDate {
 #paging_older {
     float:left;
 }
+
+
 .thumbnail {
     float: none;
     height: auto;
