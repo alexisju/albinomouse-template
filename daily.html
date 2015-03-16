@@ -51,11 +51,13 @@
                         {/if}
                         <div class="dailyEntryDescription">{$link.formatedDescription}</div>
                         
+						{if="isLoggedIn()"}
                         <div class="linkeditbuttonsDaily">
                             <form method="GET" class="buttoneditform"><input type="hidden" name="edit_link" value="{$value.linkdate}"><input type="image" src="inc/img/edit_icon.png" alt="[éditer]" title="Edit" class="button_edit"></form> 
                             <form method="POST" class="buttoneditform"><input type="hidden" name="lf_linkdate" value="{$value.linkdate}">
                             <input type="hidden" name="token" value="{$token}"><input type="hidden" name="delete_link"><input type="image" src="inc/img/delete_icon.png" alt="[supprimer]" value="supprimer" title="Delete" class="button_delete" onClick="return confirmDeleteLink();"></form>
                         </div>
+						{/if}
 
                     </div>
                 {/loop}
