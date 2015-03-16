@@ -63,9 +63,8 @@ h1 {
     margin-left:10px;
 }
 .bigbutton[name="delete_link"] {
-    margin-left:10px;
+	float: right;
 }
-
 
 .smallbutton {
     background-color: #C93030;
