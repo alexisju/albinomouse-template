@@ -383,7 +383,7 @@ width:100%
 #partagesocial {
     position:relative;
     display:inline;
-    font-size:9pt;
+    font-size:10pt;
     vertical-align:-3px;
     color:#4C4B4A;
 }
@@ -417,7 +417,7 @@ width:100%
     color:#4C4B4A;
 }
 .linkdate { 
-    font-size:9pt; 
+    font-size:10pt; 
     color:#4C4B4A; 
 }
 .linkdate a { 
@@ -430,12 +430,12 @@ width:100%
     color: #C93030;
 }
 .linkurl a { 
-    font-size:9pt; 
+    font-size:10pt; 
     color:#C93030;
     text-decoration:none!important;
 }
 .linkarchive a {
-    font-size:9pt; 
+    font-size:10pt; 
     color:#4C4B4A;
     text-decoration:none!important;
 }
@@ -463,7 +463,7 @@ width:100%
 }
 .linktaglist { padding-top:10px;}
 .linktag {
-    font-size:9pt;
+    font-size:10pt;
     color: #4C4B4A;
     margin-left:5px
     text-decoration: none;
@@ -787,7 +787,7 @@ div.daily div.dailyDate span {
 /* Individual entries in "Daily": */
 div.dailyEntry{
     margin: 5px 10px 2px 5px;
-    font-size: 9pt;
+    font-size: 10pt;
     border-bottom: 1px solid #E0E2E2;
     padding-bottom: 6px;
 }
@@ -799,7 +799,7 @@ div.dailyEntry:hover {
     background-color:rgba(0, 0, 0, 0.04);
 }
 div.dailyEntryTags { 
-    font-size:9pt;  
+    font-size:10pt;  
     word-spacing:3px;
     padding: 5px 0px;
 }
