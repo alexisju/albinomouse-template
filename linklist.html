@@ -20,13 +20,13 @@
         <div id="searchcriteria">Nothing found.</i></div>
     {else}
         {if="$search_type=='fulltext'"}
-            <div id="searchcriteria">{$result_count} results for <i>{$search_crits}</i></div>
+            <div id="searchcriteria">{$result_count} results for <span id="searchcriteria_result">{$search_crits}</span></div>
         {/if}
         {if="$search_type=='tags'"}
-            <div id="searchcriteria">{$result_count} results for tags <i>
+            <div id="searchcriteria">{$result_count} results for tags
             {loop="search_crits"}
-                <span class="linktag" title="Remove tag"><i class="glyphicon glyphicon-tag"></i> <a href="?removetag={$value|htmlspecialchars}">{$value|htmlspecialchars} <span class="remove">x</span></a></span>
-            {/loop}</i></div>
+                <span class="linktag" title="Remove tag"> <a href="?removetag={$value|htmlspecialchars}">{$value|htmlspecialchars} <span id="searchcriteria_result"><i class="glyphicon glyphicon-remove"></i></span></a></span>
+            {/loop}</div>
         {/if}
     {/if}
     <ul>
