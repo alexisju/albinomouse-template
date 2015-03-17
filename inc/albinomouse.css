@@ -1,7 +1,7 @@
 ﻿/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli        */
 /* Thème : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)      */
 /*                                                                              */
-/* Version : 20150316                                                           */
+/* Version : 20150317                                                           */
 /*                                                                              */
 
 
@@ -350,6 +350,11 @@ width: 100%;
 #toolsdiv { color:#777777; padding:5px 5px 5px 5px; clear:left; }
 #uploaddiv { color:#4C4B4A; padding:5px 5px 5px 5px; clear:left; }
 #private {margin-top:15px;}
+
+#ab-bookmarklet {                                    /*AM*/
+	display:block;
+	width:80%;
+}
 
 #editlinkform {
     color: #4C4B4A;
