@@ -42,13 +42,13 @@
                         <input type="hidden" name="token" value="{$token}"><input type="hidden" name="delete_link"><input type="image" alt="Delete" src="inc/img/delete_icon.png" title="Delete" class="button_delete" onClick="return confirmDeleteLink();"></form>
                     </div>
                 {/if}
-                <span class="linktitle"><a href="{$redirector}{$value.url|htmlspecialchars}">{$value.title|htmlspecialchars}</a></span>
+                <span class="linktitle"><a href="{$redirector}{$value.url|htmlspecialchars}">{$value.title|htmlspecialchars}</a></span><br>
+				<span class="linkurl" title="Direct link"><i class="glyphicon glyphicon-link"></i> <a href="{$value.url|htmlspecialchars}">{$value.url|htmlspecialchars}</a></span>
                 {if="$value.tags"}
                     <div class="linktaglist">
                     {loop="value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i> <a href="?addtag={$value|urlencode}">{$value|htmlspecialchars}</a> </span> {/loop}
                     </div>
                 {/if}
-                <br>
                 {if="$value.description"}<div class="linkdescription">{$value.description}</div>{/if}
                 {if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}
                     <i class="glyphicon glyphicon-time"></i> <span class="linkdate" title="Permalink"><a href="?{$value.linkdate|smallHash}">{$value.localdate|htmlspecialchars} - permalink</a> - </span>
@@ -59,9 +59,7 @@
                 <span class="linkarchive"><a href="https://web.archive.org/web/{$value.url|htmlspecialchars}">archive</a> - </span>
                 {/if}
                 <div class="linkqrcode"><a href="http://qrfree.kaywa.com/?l=1&amp;s=8&amp;d={$scripturl|urlencode}%3F{$value.linkdate|smallHash}"
-                    onclick="return showQrCode(this);" class="qrcode" data-permalink="{$scripturl}?{$value.linkdate|smallHash}">
-		   <i class="glyphicon glyphicon-qrcode"></i></a></div> -
-                <span class="linkurl" title="Short link"><a href="{$value.url|htmlspecialchars}">{$value.url|htmlspecialchars}</a></span><br>
+                    onclick="return showQrCode(this);" class="qrcode" data-permalink="{$scripturl}?{$value.linkdate|smallHash}"> <i class="glyphicon glyphicon-qrcode"></i></a></div><br>
                 </div>
         
 <div id="partagesocial"><i class="glyphicon glyphicon-share"></i>&nbsp; 

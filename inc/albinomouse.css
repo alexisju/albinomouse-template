@@ -1,7 +1,7 @@
 ﻿/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli        */
 /* Thème : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)      */
 /*                                                                              */
-/* Version : 20150317                                                           */
+/* Version : 20150324                                                           */
 /*                                                                              */
 
 
@@ -18,8 +18,8 @@
 
 .glyphicon, .fa {                              /*AM - le thème utilise glyphicons chargé via includes.html */
     color: #777777;
+    top: 2px!important;
 }
-
 
 body {
     font-family: Open Sans,Verdana,Arial,Helvetica,sans-serif;
@@ -382,19 +382,24 @@ width:100%
 }
 #linklist li {
     border-bottom: 1px solid #E0E2E2;                       /*AM*/
-    margin: 5px 10px;
-    padding: 10px 0 20px;
+    padding: 10px 0 10px;
+}
+.linkcontainer {
+	margin-bottom:2px;
 }
 #partagesocial {
-    position:relative;
+	padding-top:2px;
+	   position:relative;
     display:inline;
     font-size:10pt;
-    vertical-align:-3px;
+}
+#partagesocial a {
+    text-decoration:none;
     color:#4C4B4A;
 }
-#partagesocial a, #partagesocial a:hover {
+#partagesocial a:hover {
     color:#C93030;
-    text-decoration:none;
+	transition: all 0.2s ease-in-out 0s;
 }
 #linklist li.private {
     background-color:rgba(247, 247, 247, 0.54);
@@ -408,7 +413,9 @@ width:100%
     position: relative;
     top: 1px;
 }
-.private  .linktitle a {color:#969696;}
+.private  .linktitle a {
+	color:#969696;
+}
 .linktitle { 
     font-family:Open Sans,Sans-Serif;
     font-size:16pt;
@@ -434,10 +441,19 @@ width:100%
 .linkdate a:hover { 
     color: #C93030;
 }
-.linkurl a { 
+.linkurl { 
     font-size:10pt; 
-    color:#C93030;
-    text-decoration:none!important;
+    color:#4C4B4A;
+	opacity:0.6;
+}
+.linkurl  a { 
+	margin-left:2px;
+	color:#4C4B4A;
+	text-decoration:none!important;
+}
+.linkurl:hover, .linkurl a:hover { 
+	opacity:1;
+	transition: opacity 1s ease-in-out 0s;
 }
 .linkarchive a {
     font-size:10pt; 
@@ -449,7 +465,7 @@ width:100%
 }
 .linkdescription { 
     color:#4C4B4A; 
-    margin-bottom:20px; 
+    margin-bottom:15px; 
     font-weight:normal; 
     max-height:400px; 
     overflow:auto; 
@@ -466,7 +482,10 @@ width:100%
     display: inline;
     position: relative;
 }
-.linktaglist { padding-top:10px;}
+.linktaglist { 
+	padding-top:2px;
+    margin-bottom:15px; 
+}
 .linktag {
     font-size:10pt;
     color: #4C4B4A;
