@@ -1,11 +1,24 @@
 <?php 
+if (!empty($_SERVER['REQUEST_SCHEME'])) {
+$g_protocol = $_SERVER['REQUEST_SCHEME'];
+} elseif (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+$g_protocol = 'https';
+} else {
+$g_protocol = 'http';
+}
+$g_host = $_SERVER['HTTP_HOST'];
+$path = substr($_SERVER["REQUEST_URI"],0,-54);
+// -54 parce que "tpl/albinomouse-template/inc/opensearch.searchtags.php" = -54 caractères à enlever
+
+$opensearch_link = $g_protocol . '://' . $g_host .  $path  . '?searchterm={searchTerms}';
+
 $httpContentType = 'text/xml';
 echo '<' . '?xml version="1.0" encoding="utf-8" ?' . ">\n";
 ?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
 	<ShortName><?php echo $_SERVER['SERVER_NAME'] ?> - par tags</ShortName>
 	<Description>Recherche dans le Shaarli <?php echo $_SERVER['SERVER_NAME'] ?> </Description>
-	// <Url type="text/html" method="get" template="https://<?php echo $_SERVER['SERVER_NAME'] ?>/?searchtags={searchTerms}"/>
+	// <Url type="text/html" method="get" template="<?php echo $opensearch_link ?>"/>
 	<InputEncoding>UTF-8</InputEncoding>
 	<Developer>Alexis J / https://liens.effingo.be</Developer>
     <Image width="16" height="16">data:image/x-icon;base64,AAABAAYAHx4QAAEABADAAgAAZgAAAB8eEAABAAQAwAIAACYDAAAQEAAAAQAIAGgFAADmBQAAHx4A
