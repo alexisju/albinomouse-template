@@ -558,12 +558,13 @@ display: inline;
     font-size: 9pt;
 }
 #newversion #version_id {
-text-decoration: blink;
+    text-decoration: blink;
 }
 #cloudtag  { 
     width:980px!important;
     text-align:justify;
     word-spacing: 2px;
+    margin-bottom:10px;
 }
 #cloudtag a, #cloudtag a:visited { 
     color:#C93030 !important; 
@@ -770,7 +771,9 @@ div.daily {
     position: relative;
     width: 33%;
 }
-
+#daily_col1,#daily_col2,#daily_col3 {
+    margin-bottom:15px;
+}
 div.dailyTitle { 
     display:none;
     color:#C93030 ;
@@ -800,7 +803,7 @@ div.dailyDate a, div.dailyDate a:visited {
     text-decoration:none;
     font-family:Open Sans, sans-serif;
     font-size:10pt;
-    color:#777777;
+    color:#4C4B4A;
     text-align:center;
     padding-bottom:10px;
     border-bottom: 1px solid #E0E2E2;
@@ -809,14 +812,14 @@ div.dailyDate a, div.dailyDate a:visited {
 #dailyPaging a,#dailyPaging a:visited{
     text-decoration:none;
     font-family:Open Sans,sans-serif;
-    color:#777777;
+    color:#4C4B4A;
 }
 #dailyPaging a:hover{
     color:#C93030;
 }
 
 #dailyLinktag, #dailyLinktag a {
-    color:#777777;
+    color:#4C4B4A;
     font-size:8pt;
     padding-right:8pt;
 }
@@ -837,7 +840,7 @@ div.dailyEntry{
 }
 div.dailyEntry  a {
     text-decoration:none; 
-    color: #C93030 ; 
+    color: #4C4B4A ; 
 }
 div.dailyEntryTags { 
     font-size:10pt;  
@@ -848,6 +851,12 @@ div.dailyEntryTitle {
     font-size: 15pt;
     line-height: 1.2em;
     padding: 5px 0px;
+}
+div.dailyEntryTitle a {
+    color:#C93030;
+}
+div.dailyEntryTitle a:hover {
+    color: #4C4B4A ; 
 }
 div.dailyEntryLinkdate a {
     color:#4C4B4A;
