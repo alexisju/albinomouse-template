@@ -805,7 +805,7 @@ div.dailyDate a, div.dailyDate a:visited {
     font-size:10pt;
     color:#4C4B4A;
     text-align:center;
-    padding-bottom:10px;
+    padding:0px 5px 10px 5px;
     border-bottom: 1px solid #E0E2E2;
 }
 

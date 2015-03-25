@@ -41,7 +41,7 @@
                         {/if}
                         {if="$link.tags"}
                             <div class="dailyEntryTags">
-                                {loop="value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i> <a href="?addtag={$value|urlencode}">{$value|htmlspecialchars}</a> </span> 
+                                {loop="value.taglist"}<span class="linktag" title="Search tag"><i class="glyphicon glyphicon-tag"></i> <a href="?searchtags={$value|urlencode}">{$value|htmlspecialchars}</a> </span> 
                                 {/loop}
                             </div>
                         {/if}
