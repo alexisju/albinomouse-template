@@ -43,7 +43,7 @@
                     </div>
                 {/if}
                 <span class="linktitle"><a href="{$redirector}{$value.url|htmlspecialchars}">{$value.title|htmlspecialchars}</a></span><br>
-				<span class="linkurl" title="Direct link"><i class="glyphicon glyphicon-link"></i> <a href="{$value.url|htmlspecialchars}">{$value.url|htmlspecialchars}</a></span>
+                        <span class="linkurl" title="Direct link"><i class="glyphicon glyphicon-link"></i> <a href="{$value.url|htmlspecialchars}">{$value.url|htmlspecialchars}</a></span>
                 {if="$value.tags"}
                     <div class="linktaglist">
                     {loop="value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i> <a href="?addtag={$value|urlencode}">{$value|htmlspecialchars}</a> </span> {/loop}

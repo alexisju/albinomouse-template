@@ -1,11 +1,11 @@
-<div id="menu">
-    <span id="bonjourshaarli" class="nomobile">a déjà partagé {if="!empty($linkcount)"}{$linkcount}{/if} liens!</span>
-    <span id="shaarli_title"><a href="?">{$shaarlititle|htmlspecialchars}</a></span>
+<div id="ab-header">
+    <span id="ab-title"><a href="?">{$shaarlititle|htmlspecialchars}</a></span>
+    <span id="ab-count" class="nomobile">a déjà partagé {if="!empty($linkcount)"}{$linkcount}{/if} liens!</span>
 {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
-    <style TYPE="text/css">#pageheader {margin-top:-10px} #menu {height: 100px;} #bonjourshaarli{display:none;}</style>
-	{ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
+    <style TYPE="text/css">#pageheader{margin-top:-10px} #ab-header{height: 100px;} #ab-count{display:none;}</style>
+    {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
 {else}
-    
+<div id="ab-menu">
     <a id="activeLinklist" href="?"><i class="glyphicon glyphicon-star"></i> shaarli</a>
     <a href="#"><i class="glyphicon glyphicon-bullhorn"></i> link 1</a>
     <a href="#"><i class="glyphicon glyphicon-align-justify"></i> link 2</a>
@@ -21,6 +21,7 @@
   {else}
     <a id="activeLogin" href="?do=login"><i class="glyphicon glyphicon-log-in"></i> login</a>
   {/if}
+</div>
 {/if}
 </div>
 <div class="clear"></div>

@@ -1,7 +1,7 @@
 ﻿/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli        */
 /* Thème : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)      */
 /*                                                                              */
-/* Version : 20150324                                                           */
+/* Version : 20150325                                                           */
 /*                                                                              */
 
 
@@ -110,12 +110,12 @@ width: 100%;
 }
 
 #pageheader {
-    background-color: rgba(196, 198, 199, 0.3);                             /*   AM   */
+    background-color: rgba(196, 198, 199, 0.3);             /*AM*/
     border-bottom: 1px solid #DDDDDD;
     color: #333333;
     width:100%;
-    font-family:'Open Sans',Sans-Serif;  /*   AM + free fonts  */
-    font-size: 13pt;  /*   AM   */
+    font-family:'Open Sans',Sans-Serif;
+    font-size: 13pt;
 }
 
 #pageheader a, #pageheader a:visited {
@@ -182,33 +182,42 @@ width: 100%;
     cursor:pointer;
 }
 
-#pageheader #shaarli_title a {
+#ab-header {
+    height: 192px;
+    margin: auto;
+    width: 980px;
+}
+
+#ab-menu {
+    display:block;
+    margin-top:71px;
+}
+
+#pageheader #ab-title a {
     background:none;
     box-shadow:0;
     font-size: 38px;
-    margin-top: 27px;
+    margin-top: 60px;
     padding:0px;
 }        
                          
-#shaarli_title {                                            /*AM +size*/
+#ab-title {
     font-family:"Open Sans";
     font-weight:700;
     font-size: 35px;
     line-height: 1.1em;
     margin:11px 0 0 5px;
-    display:table;
 }
 
-#shaarli_title a { backround:none repeat scroll 0 0 transparent;color: #C93030 !important; border-radius: 0px;box-shadow:0; }
+#ab-title a { backround:none repeat scroll 0 0 transparent;color: #C93030 !important; border-radius: 0px;box-shadow:0; }
 
-#bonjourshaarli {
+#ab-count {
     background-color: #4C4B4A;
     color: #FFFFFF;
     display: inline-block;
-    letter-spacing: 1px;
-    margin: 15px 0 -40px 290px;
+    margin-top: 15px;
     padding: 13px;
-    position: relative;
+    position: absolute;
     vertical-align: top;
     font-family:"Open Sans",sans-serif; 
     font-size: 1em;
@@ -216,7 +225,7 @@ width: 100%;
     border-radius:5px;
 }
 
-#bonjourshaarli:after {
+#ab-count:after {
     border-bottom: 20px solid rgba(0, 0, 0, 0);
     border-left: 19px solid #4C4B4A;
     bottom: -20px;
@@ -252,7 +261,7 @@ width: 100%;
 }
 
 .paging { 
-    border-bottom: 2px solid #E0E2E2;           /*AM - new paging - icones glyphicon - modif linklist.paging.html*/
+    border-bottom: 1px solid #E0E2E2;           /*AM - new paging - icones glyphicon - modif linklist.paging.html*/
     clear: both;
     color: #777777;
     font-size: 10pt;
@@ -324,15 +333,17 @@ width: 100%;
     width:150px;
     background-color: #F7F7F7;
     border: medium none;
-    border-radius: 2px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: none;
     color: #333333;
     display: inline;
     margin: 5px 3px 3px;
-    padding: 5px;
+    padding: 10px;
 }
 #loginform  #loginbutton {
-    width:50px;
+    width:75px;
+    color:#4C4B4A;
+    cursor: pointer;
 }
 #loginform  #sessioncheck {
     float:left;
@@ -377,7 +388,7 @@ width:100%
 }
 
 #linklist {
-    margin: 20px auto;                                       /*AM*/
+    margin: 5px auto;                                       /*AM*/
     width: 980px!important;
 }
 #linklist li {
@@ -534,34 +545,42 @@ display: inline;
 }
 
 #footer  a:hover{
-	color:#FFFFFF;
+    color:#FFFFFF;
 }
 
 #newversion {
-	background-color: #FFFFA0;
-	color: #000;
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 2 7 2 7;
-	font-size: 9pt;
+    background-color: #FFFFA0;
+    color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2 7 2 7;
+    font-size: 9pt;
 }
 #newversion #version_id {
 text-decoration: blink;
 }
 #cloudtag  { 
     width:980px!important;
-    margin:20px 0px;
     text-align:justify;
     word-spacing: 2px;
 }
-#cloudtag a, #cloudtag a:visited { color:#C93030 !important; text-decoration:none;}
-#cloudtag a:hover { color:#4C4B4A !important; text-decoration:none;transition-duration:0.5s;}
-#cloudtag span { color:#4C4B4A !important;}
+#cloudtag a, #cloudtag a:visited { 
+    color:#C93030 !important; 
+    text-decoration:none;
+}
+#cloudtag a:hover {
+    color:#4C4B4A !important; 
+    text-decoration:none;
+    transition-duration:0.5s;
+}
+#cloudtag span {
+    color:#4C4B4A !important;
+}
 .count {
     color:#99f; 
     padding-left:5px; 
-    padding-right:2px;
+    padding-right:5px;
 }
 
 #install {
@@ -618,12 +637,12 @@ text-decoration: blink;
 }
 
 .thumbnail img{
-	background-color: #DDDDDD;
+    background-color: #DDDDDD;
     border: 2px solid #DDDDDD;
     border-radius: 5px;
     float: right;
     width: 120px;
-	height:90px;
+    height:90px;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -632,8 +651,8 @@ text-decoration: blink;
 
 /* --- Picture wall CSS --- */
 .picwall_container { 
-    clear:both;
-    margin: 20px auto 110px auto;
+    clear: both;
+    margin: 10px auto;
     width: 980px; 
 }
 .picwall_pictureframe {                      /*AM*/
@@ -643,7 +662,7 @@ text-decoration: blink;
     display: table-cell;
     float: left;
     width: 120px;
-	height:90px;
+    height:90px;
     margin: 8px;
     overflow: hidden;
     position: relative;
@@ -666,7 +685,7 @@ text-decoration: blink;
 .picwall_pictureframe img {
     width: 100%;
     height: 100%!important;
-	border-radius:4px;
+    border-radius:4px;
 }
 
 /* Adapt the width of the image */
@@ -712,7 +731,8 @@ div.qrcode {
 
 div#permalinkQrcode {
     background-color: #FFFFFF;
-    border: 1px solid #777777;
+    border: 0px solid #777777;
+    border-radius:5px;
     box-shadow: 2px 2px 20px 2px #333333;
     font-size: 8pt;
     height: 220px;
@@ -773,7 +793,7 @@ div.dailyDate a, div.dailyDate a:visited {
 }
 
 #dailyPaging #paging_mode  {
-	margin-top:0px;
+    margin-top:0px;
 }
 
 #dailyPaging {
@@ -783,7 +803,7 @@ div.dailyDate a, div.dailyDate a:visited {
     color:#777777;
     text-align:center;
     padding-bottom:10px;
-    border-bottom: 2px solid #E0E2E2;
+    border-bottom: 1px solid #E0E2E2;
 }
 
 #dailyPaging a,#dailyPaging a:visited{
@@ -819,9 +839,6 @@ div.dailyEntry  a {
     text-decoration:none; 
     color: #C93030 ; 
 }
-div.dailyEntry:hover {
-    background-color:rgba(0, 0, 0, 0.04);
-}
 div.dailyEntryTags { 
     font-size:10pt;  
     word-spacing:3px;
@@ -843,8 +860,8 @@ div.dailyEntryThumbnail {
     margin:20px 0px 2px 0px;
 }
 div.dailyEntryDescription { 
-    margin-top: 10px;
-    margin-bottom: 10px; 
+    margin-top: 3px;
+    margin-bottom: 3px; 
     text-align:justify; 
     overflow:auto;
     color:#4C4B4A ;
@@ -939,35 +956,49 @@ html {
 }
 .nomobile  { display:none; }
 
-#menu , #formcontainer, #linklist, .picwall_container, .daily, .cloudtag  {
+#menu, #formcontainer, #linklist, .picwall_container, .daily, .cloudtag  {
     width:100%!important;
     display:inline;
     margin:0;
 }
-
 #logo {
-	display:none;
+    display:none;
+}
+#pageheader a{
+    padding:10px;
+    margin:4px;
 }
 #pageheader {
-    margin-top: -10px;
+    padding-bottom:12px;
 }
-#pageheader a {
+#ab-header {
+    margin: auto;
+    width: 100%;
+    height:auto;
+}
+
+#pageheader #ab-title a {
+    margin:20px 0px 0px 5px;
+    font-size:20pt;
+    padding-bottom:15px;
+    line-height:15px;
+}
+#ab-count {display:none;}
+
+#ab-menu {
+    margin-top:10px;
     padding:5px;
-    margin:3px;
+    position:relative;
 }
-
-#bonjourshaarli {display:none;}
-
 #headerform {
     background-color: #FFFFFF;
     clear: both;
     color: #4C4B4A;
     display: block;
     float: left;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     position: relative;
-    margin:5px 0;
-    width: 90%;
+    margin:17px 0px 7px 0px;
 }
 #headerform input {
     width:100%;
@@ -992,6 +1023,9 @@ html {
 #pageheader a {
     padding:5px;
     margin:3px;
+}
+#linklist li {
+    padding:10px;
 }
 #paging_linksperpage {display:none;}
 
@@ -1034,7 +1068,7 @@ div.qrcode {
     margin-top:-15px;
     background-color: #E0E2E2;
     color: #777777;
-    margin: 7px 3px;
+    margin: 0px;
     padding:13px;
     text-decoration: none;
 }
@@ -1045,11 +1079,11 @@ div.dailyDate {
     margin-top: 123px;
 }
 #paging_current { 
-	font-size: 14pt;
+    font-size: 14pt;
 }
 
 #paging_older i ,#paging_newer i{ 
-	font-size: 14pt;
+    font-size: 14pt;
 }
 
 #paging_newer {
@@ -1059,7 +1093,6 @@ div.dailyDate {
     float:left;
 }
 
-
 .thumbnail {
     float: none;
     height: auto;
@@ -1067,7 +1100,7 @@ div.dailyDate {
     text-align: center;
 }
 #cloudtag {
-    padding: 0px;
+    padding: 5px;
 }
 
 div.dailyEntry : { 
@@ -1095,6 +1128,15 @@ div.dailyEntryTitle {
 }
 div.dailyEntryDescription {
     font-size: 10pt;
+}
+div#permalinkQrcode {
+    left:0px;
+    top:0px;
+    position:relative;
+    padding:13px 23px 7px 15px;
+    border:none;
+    border-radius:5px;
+}
 
 #footer {
     height: 120px;
