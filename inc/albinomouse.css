@@ -803,7 +803,7 @@ div.dailyDate a, div.dailyDate a:visited {
     text-decoration:none;
     font-family:Open Sans, sans-serif;
     font-size:10pt;
-    color:#4C4B4A;
+    color:#777;
     text-align:center;
     padding:0px 5px 10px 5px;
     border-bottom: 1px solid #E0E2E2;
@@ -812,7 +812,7 @@ div.dailyDate a, div.dailyDate a:visited {
 #dailyPaging a,#dailyPaging a:visited{
     text-decoration:none;
     font-family:Open Sans,sans-serif;
-    color:#4C4B4A;
+    color:#777;
 }
 #dailyPaging a:hover{
     color:#C93030;
