@@ -1,14 +1,14 @@
-﻿/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli       	*/
+﻿/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli        */
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
-/*                                                         						*/
-/* Version : 20150326                                                         	*/
+/*                                                                              */
+/* Version : 20150326                                                           */
 
 @font-face {
     font-family: "Open Sans";
     src: url('fonts/OpenSans-Regular-webfont.eot') format('opentype');
     src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+        url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
         url('fonts/OpenSans-Regular-webfont.svg#open_Sans-Serifregular') format('svg');
     font-weight: normal;
@@ -39,9 +39,9 @@ input[name="Save"],
 input[name="renametag"],
 input[name="deletetag"],
 input[name="import_file"] {
-	background-color: #C93030;
-	color: #ffffff;
-	border: solid 1px #C93030;
+    background-color: #C93030;
+    color: #ffffff;
+    border: solid 1px #C93030;
 }
 
 a {
@@ -61,9 +61,9 @@ h1 {
     margin-left: 5px;
     padding: 5px;
     color: #ffffff!important;
-	background-color: #C93030!important;
-	border-radius: 3px;
-	border: solid 1px #C93030!important; 
+    background-color: #C93030!important;
+    border-radius: 3px;
+    border: solid 1px #C93030!important; 
 }
 
 .bigbutton[name="save_edit"] {
@@ -73,7 +73,7 @@ h1 {
     margin-left:10px;
 }
 .bigbutton[name="delete_link"] {
-	float: right;
+    float: right;
 }
 
 .smallbutton {
@@ -84,7 +84,7 @@ h1 {
     margin-left: 5px;
     padding: 10px 10px 15px 10px!important;
     color: #ffffff!important;
-	font-weight:300!important;
+    font-weight:300!important;
 }
 
 /* Small tab on the left of each link with edit/delete buttons. */
@@ -109,7 +109,7 @@ h1 {
 }
 
 #pageheader #menu {
-	width: 100%;
+    width: 100%;
 }
 
 #pageheader #logo {
@@ -122,8 +122,8 @@ h1 {
     color: #333333;
     font-family:'Open Sans',Sans-Serif;
     font-size: 13pt;
-	width: 100%;
-	margin: 0px auto;
+    width: 100%;
+    margin: 0px auto;
 }
 
 #pageheader a, #pageheader a:visited {
@@ -191,7 +191,7 @@ h1 {
 
 #am-menu {
     display:block;
-	width:100%;
+    width:100%;
     margin:71px auto;  
 }
 
@@ -212,10 +212,10 @@ h1 {
 }
 
 #am-title a {
-	backround:none repeat scroll 0 0 transparent;
-	color: #C93030 !important; 
-	border-radius: 0px;
-	box-shadow:0; 
+    background:none repeat scroll 0 0 transparent;
+    color: #C93030 !important; 
+    border-radius: 0px;
+    box-shadow:0; 
 }
 
 #am-count {
@@ -259,9 +259,9 @@ h1 {
 
 #searchcriteria a,#searchcriteria a:visited, #searchcriteria_result{
     font-size: 14pt;
-	font-weight:bold;
+    font-weight:bold;
     text-decoration:none;
-	word-spacing:3px;
+    word-spacing:3px;
 }
 #searchcriteria_result i { 
 	top: 4px;
@@ -292,29 +292,29 @@ h1 {
 #paging_mode { 
     float:none;
     position:absolute; 
-	margin-top:0px;
+    margin-top:0px;
 }
 #paging_linksperpage { 
     float:right; 
-	margin-top:0px;
+    margin-top:0px;
 }
 #paging_current { 
     display:inline; 
     color:#777777;
     padding:4px;
-	font-size: 11pt;
+    font-size: 11pt;
 }
 #paging_older i ,#paging_newer i{ 
-	top:2px;
-	font-size: 11pt;
+    top:2px;
+    font-size: 11pt;
 }
 #am-container {
-  width:980px;
-  margin: 0 auto;
+    width:980px;
+    margin: 0 auto;
 }
 #am-searchcontainer {
-	float: right;
-	margin-top: 20px;
+    float: right;
+    margin-top: 20px;
 }
 .searchform input {
     width: 250px!important;
@@ -342,9 +342,9 @@ h1 {
 #loginform  #loginbutton {
     width:75px;
     background-color:#C93030;
-	color:#ffffff;
+    color:#ffffff;
     cursor: pointer;
-	border:solid 1px #C93030;
+    border:solid 1px #C93030;
 }
 #loginform  #sessioncheck {
     float:left;
@@ -356,7 +356,15 @@ h1 {
 .addform input.linkurl {
     width:400px;
     margin:20px 0 100px 0;
-	padding:8px;
+    font-size:13pt!important;
+    color: #606060!important;
+    opacity:1!important;
+}
+.addform {
+    padding:8px!important;
+}
+.addform .bigbutton {
+    padding: 5px!important;
 }
 
 #toolsdiv { color:#777777; padding:5px 5px 5px 5px; clear:left; }
@@ -364,33 +372,29 @@ h1 {
 #private {margin-top:15px;}
 
 #am-bookmarklet {
-	display:block;
-	width:80%;
+    display:block;
+    width:80%;
 }
 
 #am-editlinkform-background {
-	background-color:rgba(196, 198, 199, 0.3);
-	padding-bottom:20px;
+    background-color:rgba(196, 198, 199, 0.3);
+    padding-bottom:20px;
 }
 #editlinkform {
     color: #4C4B4A;
-    padding: 10px;
-    margin-bottom: 20px;
+    margin: 0px auto 30px auto;
     font-size:11pt!important;
-	width:530px;
+    width:530px;
 }
 #editlinkform label {
-	color: #4C4B4A;
+    color: #4C4B4A;
 }
 #editlinkform textarea, #editlinkform input[type=text], .lf_input {
-	width:97%;
+    width:97%;
 }
-textarea#lf_description {
-	height:70px!important;
-}
+
 #lf_private {
-    margin:10px 0 10px 2px;
-    
+    margin:0px 0px 5px 2px;
 }
 .lf_input #lftags {
 width:100%
@@ -405,11 +409,11 @@ width:100%
     padding: 10px 0 10px;
 }
 .linkcontainer {
-	margin-bottom:2px;
+    margin-bottom:2px;
 }
 #am-partagesocial {
-	padding-top:2px;
-	   position:relative;
+    padding-top:2px;
+    position:relative;
     display:inline;
     font-size:11pt;
 }
@@ -419,7 +423,7 @@ width:100%
 }
 #am-partagesocial a:hover {
     color:#C93030;
-	transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
 }
 #linklist li.private {
     background-color:rgba(247, 247, 247, 0.54);
@@ -434,7 +438,7 @@ width:100%
     top: 1px;
 }
 .private  .linktitle a {
-	color:#969696;
+    color:#969696;
 }
 .linktitle { 
     font-family:Open Sans,Sans-Serif;
@@ -464,16 +468,16 @@ width:100%
 .linkurl { 
     font-size:11pt; 
     color:#4C4B4A;
-	opacity:0.6;
+    opacity:0.6;
 }
 .linkurl  a { 
-	margin-left:2px;
-	color:#4C4B4A;
-	text-decoration:none!important;
+    margin-left:2px;
+    color:#4C4B4A;
+    text-decoration:none!important;
 }
 .linkurl:hover, .linkurl a:hover { 
-	opacity:1;
-	transition: opacity 1s ease-in-out 0s;
+    opacity:1;
+    transition: opacity 1s ease-in-out 0s;
 }
 .linkarchive a {
     font-size:11pt; 
@@ -503,7 +507,7 @@ width:100%
     position: relative;
 }
 .linktaglist { 
-	padding-top:2px;
+    padding-top:2px;
     margin-bottom:15px; 
 }
 .linktag {
@@ -514,8 +518,8 @@ width:100%
     word-spacing: 3px;
 }
 .linktag a:hover {    
-	color: #c93030;
-	text-decoration: none;
+    color: #c93030;
+    text-decoration: none;
 }
 .linktag a,.linktag a:visited {    
     color: #4C4B4A;
@@ -523,18 +527,18 @@ width:100%
 }
 
 .linkshort {
-font-size: 8pt;
-color: #888;
+    font-size: 8pt;
+    color: #888;
 }
 .linkshort a {
-text-decoration: none;
-color: #393964;
+    text-decoration: none;
+    color: #393964;
 }
 .linkshort a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
 .buttoneditform {
-display: inline;
+    display: inline;
 }
 
 #footer {
@@ -1008,28 +1012,28 @@ html {
 }
 #pageheader {
     padding-bottom:12px;
-	width:100%;
+    width:100%;
 }
 #am-header {
     margin: auto;
     width: 100%;
     height:auto;
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 #am-count {display:none;}
 #am-title,#am-title a {
-	margin:0!important;
-	font-size:25pt!important;
+    margin:0!important;
+    font-size:25pt!important;
 }
 #am-menu {
-	height:10px 5px;
-	width: auto!important;
-	margin:10px 5px!important;
+    height:10px 5px;
+    width: auto!important;
+    margin:10px 5px!important;
 }
 #am-searchcontainer {
-	float:none;
-	margin:0px 5px!important;
+    float:none;
+    margin:0px 5px!important;
 }
 #am-searchcontainer input {
     width:250px!important;
@@ -1172,13 +1176,13 @@ div#permalinkQrcode {
     height: 120px;
 } 
 #changepasswordform input {
-	margin-bottom:10px;
+    margin-bottom:10px;
 }
 #changetag {
-	display:block;
+    display:block;
 }
 #changetag #totag {
-	margin-left:0px;
-	margin-bottom:10px;
+    margin-left:0px;
+    margin-bottom:10px;
 }
 }
