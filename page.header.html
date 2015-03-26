@@ -1,11 +1,15 @@
-<div id="ab-header">
-    <span id="ab-title"><a href="?">{$shaarlititle|htmlspecialchars}</a></span>
-    <span id="ab-count" class="nomobile">a déjà partagé {if="!empty($linkcount)"}{$linkcount}{/if} liens!</span>
+<div id="am-header">
+    <span id="am-title"><a href="?">{$shaarlititle|htmlspecialchars}</a></span>
+    <span id="am-count" class="nomobile">a déjà partagé {if="!empty($linkcount)"}{$linkcount}{/if} liens!</span>
+<div id="am-searchcontainer">
+    <form method="GET" class="searchform" name="searchform"><input type="text" id="searchform_value" name="searchterm" placeholder="recherche libre"> </form><br/>
+    <form method="GET" class="tagfilter" name="tagfilter"><input type="text" name="searchtags" id="tagfilter_value" placeholder="recherche par tag"></form>
+</div>
 {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
-    <style TYPE="text/css">#pageheader{margin-top:-10px} #ab-header{height: 100px;} #ab-count{display:none;}</style>
+    <style TYPE="text/css">#pageheader{margin-top:-10px;width:100%;} #am-header{height: 100px;} #am-count{display:none;}</style>
     {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
 {else}
-<div id="ab-menu">
+<div id="am-menu">
     <a id="activeLinklist" href="?"><i class="glyphicon glyphicon-star"></i> shaarli</a>
     <a href="#"><i class="glyphicon glyphicon-bullhorn"></i> link 1</a>
     <a href="#"><i class="glyphicon glyphicon-align-justify"></i> link 2</a>

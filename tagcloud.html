@@ -4,21 +4,18 @@
     <style TYPE="text/css">#activeLinklist,#activeLinklist i,#activeTagcloud,#activeTagcloud i {background-color: #C93030!important;color:#FFFFFF!important;} </style>
 </head>
 <body>
-<div id="pageheader">{include="page.header"}
-    <div id=formcontainer><div id="headerform" style="white-space:nowrap;">
-    <form method="GET" class="searchform" name="searchform"><input type="text" id="searchform_value" name="searchterm" placeholder="recherche libre"> </form> <br/>
-    <form method="GET" class="tagfilter" name="tagfilter"><input type="text" name="searchtags" id="tagfilter_value" placeholder="recherche par tag"></form></div>
-</div>
+<div id="pageheader">
+	{include="page.header"}
 </div>
 
-<div id="formcontainer">
+<div id="am-container">
     <div id="linklist"><div class="paging"><div id="paging_mode"><a href="?" alt="Linklist">liste</a> | <a href="?do=daily" alt="Daily">daily</a> | <a href="?do=tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a>{/if}</div><br></div>
     </div>
 	
 <div id="cloudtag">
-{loop="tags"}
-<span class="count">{$value.count}</span><a href="?searchtags={$key|urlencode}" style="font-size:{$value.size}pt;">{$key|htmlspecialchars}</a>
-{/loop}
+	{loop="tags"}
+	<span class="count">{$value.count}</span><a href="?searchtags={$key|urlencode}" style="font-size:{$value.size}pt;">{$key|htmlspecialchars}</a>
+	{/loop}
 </div>
 </div>
 {include="page.footer"}

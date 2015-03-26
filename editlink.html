@@ -9,9 +9,7 @@
 {elseif condition="$link.description==''"}onload="document.linkform.lf_description.focus();"
 {else}onload="document.linkform.lf_tags.focus();"{/if} >
 <div id="pageheader">
-	<!--{include="page.header"}-->
 	
-<div id=formcontainer>
 <div id="editlinkform">
 <form method="post" name="linkform">
 <input type="hidden" name="lf_linkdate" value="{$link.linkdate}">
@@ -34,7 +32,6 @@ data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
 <input type="hidden" name="token" value="{$token}">
 {if="$http_referer"}<input type="hidden" name="returnurl" value="{$http_referer|htmlspecialchars}">{/if}
 </form>
-</div>
 </div>
 
 </div>
