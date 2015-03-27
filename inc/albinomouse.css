@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
 /*                                                                              */
-/* Version : 20150326                                                           */
+/* Version : 20150327                                                           */
 
 @font-face {
     font-family: "Open Sans";
@@ -325,7 +325,7 @@ h1 {
 }
 #loginform {
     color: #4C4B4A;
-    padding-bottom: 80px;
+    margin-bottom: 110px;
     position: relative;
 }
 #loginform input {
