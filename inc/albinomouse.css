@@ -1,4 +1,4 @@
-﻿/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli        */
+/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli        */
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
 /*                                                                              */
@@ -289,22 +289,22 @@ h1 {
 .paging a:active { 
     color:#c93030;  
 }
-#paging_mode { 
+.am-paging {                /*  AM  ex paging_mode*/
     float:none;
     position:absolute; 
     margin-top:0px;
 }
-#paging_linksperpage { 
+.paging_linksperpage { 
     float:right; 
     margin-top:0px;
 }
-#paging_current { 
+.paging_current { 
     display:inline; 
     color:#777777;
     padding:4px;
     font-size: 11pt;
 }
-#paging_older i ,#paging_newer i{ 
+.paging_older i ,.paging_newer i{ 
     top:2px;
     font-size: 11pt;
 }
@@ -411,17 +411,17 @@ width:100%
 .linkcontainer {
     margin-bottom:2px;
 }
-#am-partagesocial {
+.am-partagesocial {
     padding-top:2px;
     position:relative;
     display:inline;
     font-size:11pt;
 }
-#am-partagesocial a {
+.am-partagesocial a {
     text-decoration:none;
     color:#4C4B4A;
 }
-#am-partagesocial a:hover {
+.am-partagesocial a:hover {
     color:#C93030;
     transition: all 0.2s ease-in-out 0s;
 }
@@ -824,7 +824,7 @@ div.dailyDate a, div.dailyDate a:visited {
     color: #4C4B4A;
 }
 
-#dailyPaging #paging_mode  {
+#dailyPaging .am-paging  {
     margin-top:0px;
 }
 
@@ -1061,7 +1061,7 @@ html {
 #linklist li {
     padding:10px;
 }
-#paging_linksperpage {display:none;}
+.paging_linksperpage {display:none;}
 
 .searchform {margin-bottom:5px;}
 .searchform, .tagfilter {
@@ -1090,7 +1090,7 @@ div.qrcode {
     top: -10px;
     left: 0px;
 }
-#paging_mode { position:relative; }
+.am-paging { position:relative; }
 .paging_linksperpage {
     float: none;
     margin-bottom: 10px;
@@ -1106,24 +1106,24 @@ div.qrcode {
     padding:13px;
     text-decoration: none;
 }
-#dailyPaging #paging_mode {
+#dailyPaging .am-paging {
     display: block;
 }
 div.dailyDate {
     margin-top: 123px;
 }
-#paging_current { 
+.paging_current { 
     font-size: 14pt;
 }
 
-#paging_older i ,#paging_newer i{ 
+.paging_older i ,.paging_newer i{ 
     font-size: 14pt;
 }
 
-#paging_newer {
+.paging_newer {
     float:right;
 }
-#paging_older {
+.paging_older {
     float:left;
 }
 

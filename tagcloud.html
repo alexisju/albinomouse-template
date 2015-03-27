@@ -1,23 +1,25 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>{include="includes"}
     <style TYPE="text/css">#activeLinklist,#activeLinklist i,#activeTagcloud,#activeTagcloud i {background-color: #C93030!important;color:#FFFFFF!important;} </style>
 </head>
 <body>
 <div id="pageheader">
-	{include="page.header"}
+    {include="page.header"}
 </div>
 
 <div id="am-container">
-    <div id="linklist"><div class="paging"><div id="paging_mode"><a href="?" alt="Linklist">liste</a> | <a href="?do=daily" alt="Daily">daily</a> | <a href="?do=tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a>{/if}</div><br></div>
+
+    <div id="linklist"><div class="paging"><div class="am-paging"><a href="?" title="Linklist">liste</a> | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="RSS Feed">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="Atom Feed">atom</a>{/if}</div><br></div>
     </div>
-	
-<div id="cloudtag">
-	{loop="tags"}
-	<span class="count">{$value.count}</span><a href="?searchtags={$key|urlencode}" style="font-size:{$value.size}pt;">{$key|htmlspecialchars}</a>
-	{/loop}
+
+    <div id="cloudtag">
+        {loop="tags"}
+        <span class="count">{$value.count}</span><a href="?searchtags={$key|urlencode}" style="font-size:{$value.size}pt;">{$key|htmlspecialchars}</a>
+        {/loop}
+    </div>
 </div>
-</div>
+
 {include="page.footer"}
 </body>
 </html>
