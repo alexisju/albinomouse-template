@@ -12,17 +12,15 @@ Téléchargement : https://github.com/alexisju/albinomouse-template/archive/mast
 
 ### Installation ###
 
-Copiez le template dans le dossier tpl et configurez le fichier data/options.php pour charger le template.
+Copiez le dossier du template dans le dossier tpl et configurez le fichier data/options.php pour charger le template.
 
 Votre fichier data/options.php devrait ressembler à ceci:
 
-<?php
-$GLOBALS['config']['RAINTPL_TPL'] = 'tpl/albinomouse-template/';
-?>
+<?php $GLOBALS['config']['RAINTPL_TPL'] = 'tpl/albinomouse-template/'; ?>
 
 Vous trouverez plus d'information à ce sujet sur le [wiki du Shaarli communautaire] (https://github.com/shaarli/Shaarli/wiki#changing-template)
 
-Important : Pour l'utiliser ce template, vous devez utiliser la *[dernière version communautaire de Shaarli] (https://github.com/shaarli/Shaarli)*.
+**Important** : Pour l'utiliser ce template, vous devez utiliser la **[dernière version communautaire de Shaarli](https://github.com/shaarli/Shaarli)** .
 
 
 ### Conseils d'utilisation ###
