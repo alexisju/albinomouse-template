@@ -33,7 +33,11 @@
                         </div>
                         {if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}
                             <div class="dailyEntryLinkdate">
-                                 <i class="glyphicon glyphicon-time"></i> <a href="?{$link.linkdate|smallHash}">{$link.localdate}</a>
+									{if="isLoggedIn()"}	
+									 <i class="glyphicon glyphicon-time"></i> <a href="?{$link.linkdate|smallHash}">{function="strftime('%A %d %B %Y à %k:%M', $link.timestamp)"}</a>
+									{else}
+									<i class="glyphicon glyphicon-time"></i> <a href="?{$link.linkdate|smallHash}">{function="strftime('%A %d %B %Y', $link.timestamp)"}</a>
+									{/if}
                             </div>
                         {/if}
                         {if="$link.tags"}
