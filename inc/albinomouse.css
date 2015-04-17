@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
 /*                                                                              */
-/* Version : 20150327                                                           */
+/* Version : 20150417                                                           */
 
 @font-face {
     font-family: "Open Sans";
@@ -197,7 +197,6 @@ h1 {
 
 #pageheader #am-title a {
     background:none;
-    box-shadow:0;
     font-size: 38px;
     margin-top: 60px;
     padding:0px;
@@ -215,7 +214,6 @@ h1 {
     background:none repeat scroll 0 0 transparent;
     color: #C93030 !important; 
     border-radius: 0px;
-    box-shadow:0; 
 }
 
 #am-count {
@@ -513,7 +511,7 @@ width:100%
 .linktag {
     font-size:11pt;
     color: #4C4B4A;
-    margin-left:5px
+    margin-left:5px;
     text-decoration: none;
     word-spacing: 3px;
 }
@@ -567,7 +565,7 @@ width:100%
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2 7 2 7;
+    padding: 2px 7px 2px 7px;
     font-size: 9pt;
 }
 #newversion #version_id {
@@ -963,12 +961,11 @@ a {
     display: none;
 }
 #linklist li {
-    padding: 2 0 10 0;
+    padding: 2px 0px 10px 0px;
     border-top: 2px solid #000;
     clear: both;
 }
 #linklist li.private {
-    background-color: none;
     border-left: 0;
 }
 .linkdate {
@@ -1027,7 +1024,7 @@ html {
     font-size:25pt!important;
 }
 #am-menu {
-    height:10px 5px;
+    height:10px;
     width: auto!important;
     margin:10px 5px!important;
 }
@@ -1137,7 +1134,7 @@ div.dailyDate {
     padding: 5px;
 }
 
-div.dailyEntry : { 
+div.dailyEntry { 
     padding:0px 3px 10px 3px;
 }
 
