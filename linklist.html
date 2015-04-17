@@ -48,12 +48,12 @@
                 <div class="linkdescription">{if="$value.description"}{$value.description}{/if}</div>
                 {if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}
 						{if="isLoggedIn()"}	
-						<span class="linkdate" title="Permalink"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}">{function="strftime('%A %d %B %Y à %k:%m', $value.timestamp)"} - permalink</a> - </span>
+						<span class="linkdate" title="Permalink"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}">{function="strftime('%A %d %B %Y à %k:%m', $value.timestamp)"}</a> - </span>
 						{else}
-						<span class="linkdate" title="Permalink"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}">{function="strftime('%A %d %B %Y', $value.timestamp)"} - permalink</a> - </span>
+						<span class="linkdate" title="Permalink"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}">{function="strftime('%A %d %B %Y', $value.timestamp)"}</a> - </span>
 						{/if}
                 {else}
-                    <span class="linkdate" title="Short link here"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}">permalink</a> - </span>
+                    <span class="linkdate" title="Short link here"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}"></a> - </span>
                 {/if}
                 {if="$GLOBALS['config']['ARCHIVE_ORG']"}
                 <span class="linkarchive"><a href="https://web.archive.org/web/{$value.url|htmlspecialchars}">archive</a> - </span>
