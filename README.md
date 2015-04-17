@@ -1,7 +1,6 @@
 #AlbinoMouse pour Shaarli#
-par alexis j - https://liens.effingo.be/
 
-AlbinoMouse est un template pour Shaarli.
+AlbinoMouse est un template pour le [fork communautaire de Shaarli](https://github.com/shaarli/Shaarli) développé par [alexis j](https://liens.effingo.be).
 
 Démo (frontend) : https://liens.effingo.be
 
@@ -12,22 +11,25 @@ Téléchargement : https://github.com/alexisju/albinomouse-template/archive/mast
 
 ### Installation ###
 
-Copiez le dossier du template dans le dossier tpl et configurez le fichier data/options.php pour charger le template.
+Copiez le dossier du template dans le dossier `tpl` et configurez le fichier `data/options.php` pour le charger.
 
-Votre fichier data/options.php devrait ressembler à ceci:
+Votre fichier `data/options.php` devrait ressembler à ceci:
 
-<?php $GLOBALS['config']['RAINTPL_TPL'] = 'tpl/albinomouse-template/'; ?>
+```
+<php $GLOBALS['config']['RAINTPL_TPL'] = 'tpl/albinomouse-template/'; ?>
+```
 
 Vous trouverez plus d'information à ce sujet sur le [wiki du Shaarli communautaire] (https://github.com/shaarli/Shaarli/wiki#changing-template)
 
-**Important** : Pour l'utiliser ce template, vous devez utiliser la **[dernière version communautaire de Shaarli](https://github.com/shaarli/Shaarli)** .
-
+**Important** : Pour utiliser ce template, vous devez utiliser la **[dernière version communautaire de Shaarli](https://github.com/shaarli/Shaarli)**.
 
 ### Conseils d'utilisation ###
 
-Afin que ce template s'adapte à vos besoins, il est conseillé d'apporter quelques modifications manuellement, après l'installation d'Albinomouse:
- - page.header.html : personnalisation des boutons de navigations. Ils sont destinés à renvoyer vers des url externes (vers votre blog, vers votre page de contact, etc). Utilisez [Glyphicon] (http://getbootstrap.com/components/#glyphicons) pour personaliser les icônes. 
- Remarque : certains de ces boutons sont masqués lorsque vous êtes connecté à Shaarli (classe CSS "cachemoi") pour laisser place à d'autres options utiles. 
+Afin que ce template s'adapte à vos besoins, je vous conseille de modifier le fichier `page.header.html` après son installation. Vous pourrez ainsi personnaliser les boutons de navigations. Ils sont destinés à renvoyer vers des url externes (vers votre blog, vers votre page de contact, etc). 
+
+Vous pouvez personnaliser les icônes du menu facilement grâce à [Glyphicon](http://getbootstrap.com/components/#glyphicons).
+
+Remarque : certains éléments du menus sont volontairement masqués lorsque vous êtes connecté à Shaarli (classe CSS "cachemoi") pour laisser place à d'autres options utiles. 
 
 ###Licences###
   - AlbinoMouse est disponible sous [licence GPLv3] (inc/albinomouse-licence.txt)
