@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
 /*                                                                              */
-/* Version : 20150417                                                           */
+/* Version : 20150422                                                           */
 
 @font-face {
     font-family: "Open Sans";
@@ -133,7 +133,7 @@ h1 {
     text-decoration:none;
     font-size:13pt;
     padding: 13px;
-    margin: 8px 5px; /*AM*/
+    margin: 8px 5px;
     border-radius: 5px;
 }
 #pageheader a:hover {
@@ -287,7 +287,7 @@ h1 {
 .paging a:active { 
     color:#c93030;  
 }
-.am-paging {                /*  AM  ex paging_mode*/
+.am-paging {
     float:none;
     position:absolute; 
     margin-top:0px;
@@ -1024,7 +1024,7 @@ html {
     font-size:25pt!important;
 }
 #am-menu {
-    height:10px;
+    height:auto;
     width: auto!important;
     margin:10px 5px!important;
 }
