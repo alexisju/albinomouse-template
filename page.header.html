@@ -1,6 +1,6 @@
 <div id="am-header">
     <span id="am-title"><a href="?">{$shaarlititle|htmlspecialchars}</a></span>
-    <span id="am-count" class="nomobile">a déjà partagé {if="!empty($linkcount)"}{$linkcount}{/if} liens !</span>
+    {if="!empty($linkcount)"}<span id="am-count" class="nomobile">a déjà partagé {$linkcount} liens !</span>{/if}
 <div id="am-searchcontainer">
     <form method="GET" class="searchform" name="searchform"><input type="text" id="searchform_value" name="searchterm" placeholder="recherche libre" tabindex=1> </form><br/>
     <form method="GET" class="tagfilter" name="tagfilter"><input type="text" name="searchtags" id="tagfilter_value" placeholder="recherche par tag" tabindex=2></form>
