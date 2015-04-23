@@ -525,9 +525,9 @@ width:100%
     background-color: #C93030;
     clear: both;
     color: #FFFFFF;
-    font-size: 11pt;
-    height: 80px;
-    padding-top: 25px;
+    font-size: 10pt;
+    height: auto;
+    padding: 20px;
     text-align: center;
 }
 #footer  a{ color:#FFFFFF!important;
@@ -1150,7 +1150,7 @@ div#permalinkQrcode {
     border-radius:5px;
 }
 #footer {
-    height: 120px;
+    height: auto;
 } 
 #changepasswordform input {
     margin-bottom:10px;
