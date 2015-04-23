@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
 /*                                                                              */
-/* Version : 20150422                                                           */
+/* Version : 20150423                                                           */
 
 @font-face {
     font-family: "Open Sans";
@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: Open Sans,Verdana,Arial,Helvetica,sans-serif;
+    font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
     font-size: 11pt;
     background-color: #ffffff;
     word-wrap: break-word;
@@ -43,11 +43,9 @@ input[name="import_file"] {
     color: #ffffff;
     border: solid 1px #C93030;
 }
-
 a {
     text-decoration: none;
 }
-
 h1 {
     font-size: 20pt;
     font-weight: bold;
@@ -65,7 +63,6 @@ h1 {
     border-radius: 3px;
     border: solid 1px #C93030!important; 
 }
-
 .bigbutton[name="save_edit"] {
     margin-top:5px;
 }
@@ -75,7 +72,6 @@ h1 {
 .bigbutton[name="delete_link"] {
     float: right;
 }
-
 .smallbutton {
     background-color: #C93030!important;
     border-radius: 3px;
@@ -111,21 +107,18 @@ h1 {
 #pageheader #menu {
     width: 100%;
 }
-
 #pageheader #logo {
     display:none;
 }
-
 #pageheader {
     background-color: rgba(196, 198, 199, 0.3);
     border-bottom: 1px solid #DDDDDD;
     color: #333333;
-    font-family:'Open Sans',Sans-Serif;
+    font-family:"Open Sans",Sans-Serif;
     font-size: 13pt;
     width: 100%;
     margin: 0px auto;
 }
-
 #pageheader a, #pageheader a:visited {
     background-color: #E0E2E2; 
     color:#777777;
@@ -148,6 +141,7 @@ h1 {
 #toolsdiv a span{
     color:#777777;
 }
+
 .linksperpage,.tagfilter,.searchform,.addform {
     background-color: #F7F7F7;
     display:inline;
@@ -158,13 +152,11 @@ h1 {
     margin:10px 3px 3px 3px;
     color:#cecece;
 }
-
 .linksperpage {
     background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
     padding: 0px;
 }
-
 .linksperpage input,.tagfilter input, .searchform input, .addform input{
     border:none;
     color:#606060;
@@ -172,11 +164,9 @@ h1 {
     box-shadow:none;
     padding:5px;
 }
-
 .linksperpage input{
     padding:0;
 }
-
 .tagfilter input.bigbutton,.searchform input.bigbutton,.addform input.bigbutton{
     padding:0 5px 0 5px;
     margin:5px 0 5px 0;
@@ -188,20 +178,17 @@ h1 {
     margin: auto;
     max-width: 980px;
 }
-
 #am-menu {
     display:block;
     width:100%;
     margin:71px auto;  
 }
-
 #pageheader #am-title a {
     background:none;
     font-size: 38px;
     margin-top: 60px;
     padding:0px;
-}        
-
+} 
 #am-title {
     font-family:"Open Sans";
     font-weight:700;
@@ -209,13 +196,11 @@ h1 {
     line-height: 1.1em;
     margin:11px 0 0 5px;
 }
-
 #am-title a {
     background:none repeat scroll 0 0 transparent;
     color: #C93030 !important; 
     border-radius: 0px;
 }
-
 #am-count {
     background-color: #4C4B4A;
     color: #FFFFFF;
@@ -229,7 +214,6 @@ h1 {
     font-weight:700;
     border-radius:5px;
 }
-
 #am-count:after {
     border-bottom: 20px solid rgba(0, 0, 0, 0);
     border-left: 19px solid #4C4B4A;
@@ -250,12 +234,12 @@ h1 {
 
 #searchcriteria { 
     color: #777777;
-    font-family: Open Sans,Sans-Serif;
+    font-family: "Open Sans",Sans-Serif;
     font-size: 14pt;
     padding-top: 20px;
 }
 
-#searchcriteria a,#searchcriteria a:visited, #searchcriteria_result{
+#searchcriteria a,#searchcriteria a:visited,#searchcriteria_result {
     font-size: 14pt;
     font-weight:bold;
     text-decoration:none;
@@ -273,7 +257,6 @@ h1 {
     padding: 10px 5px;
     text-align: center;
 }
-
 .paging a:link { 
     color:#777777; 
     text-decoration:none;
@@ -427,7 +410,7 @@ width:100%
     background-color:rgba(247, 247, 247, 0.54);
 }
 #linklist li.private .linktitle:before {                    /*AM - cadenas pour liens privés. Requiert glyphicons*/
-    font-family: 'Glyphicons Halflings'; 
+    font-family: "Glyphicons Halflings"; 
     content: "";
     font-size: 14pt;
     color: #777777;
@@ -439,7 +422,7 @@ width:100%
     color:#969696;
 }
 .linktitle { 
-    font-family:Open Sans,Sans-Serif;
+    font-family:"Open Sans",Sans-Serif;
     font-size:16pt;
     font-weight:500; 
 }
@@ -523,7 +506,6 @@ width:100%
     color: #4C4B4A;
     text-decoration: none;
 }
-
 .linkshort {
     font-size: 8pt;
     color: #888;
@@ -548,13 +530,11 @@ width:100%
     padding-top: 25px;
     text-align: center;
 }
-
 #footer  a{ color:#FFFFFF!important;
     text-decoration:none;
     font-weight:bold;
     padding:0!important;
 }
-
 #footer  a:hover{
     color:#FFFFFF;
 }
@@ -594,7 +574,6 @@ width:100%
     padding-left:5px; 
     padding-right:5px;
 }
-
 #install {
 	margin: 0 20px;
 	width:980px;
@@ -774,15 +753,13 @@ div#permalinkQrcode {
 }
 
 /* --- Daily CSS --- */  
-
 div.daily {                                              
     background-color: #FFFFFF;
-    font-family: Open Sans,Sans-Serif;
+    font-family: "Open Sans",Sans-Serif;
     margin: 20px auto;
     position: relative;
     width: 980px;
 }
-
 #daily_col1 {
     float: left;
     position: relative;
@@ -807,12 +784,12 @@ div.dailyTitle {
     font-weight: normal;
     font-size: 36px;
     text-align:center; 
-    font-family:Open Sans,Sans-Serif;
+    font-family:"Open Sans",Sans-Serif;
     padding:5px;
 }
 div.dailyDate { 
     color: #4C4B4A;
-    font-family: Open Sans,Sans-Serif;
+    font-family: "Open Sans",Sans-Serif;
     font-size: 20pt;
     padding: 0 20px 15px;
     text-align: center;
@@ -828,7 +805,7 @@ div.dailyDate a, div.dailyDate a:visited {
 
 #dailyPaging {
     text-decoration:none;
-    font-family:Open Sans, sans-serif;
+    font-family:"Open Sans", sans-serif;
     font-size:11pt;
     color:#777;
     text-align:center;
@@ -838,7 +815,7 @@ div.dailyDate a, div.dailyDate a:visited {
 
 #dailyPaging a,#dailyPaging a:visited{
     text-decoration:none;
-    font-family:Open Sans,sans-serif;
+    font-family:"Open Sans",sans-serif;
     color:#777;
 }
 #dailyPaging a:hover{
@@ -915,7 +892,6 @@ div.dailyEntryDescription  a{
     opacity:1;
 }
 
-
 /* Common CSS screwdriver */
 .clear {
     clear: both;
@@ -984,7 +960,6 @@ a {
 }
 }
 
-
 /* ---------------------- Responsive Albinomouse Template --------------------------------------------------*/
 
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 854px) {
@@ -993,8 +968,9 @@ html {
     background: none repeat scroll 0 0 #FFFFFF;
     color: #777777;
 }
-.nomobile  { display:none; }
-
+.nomobile  { 
+display:none; 
+}
 #menu, #am-container, #linklist, .picwall_container, .daily, .cloudtag  {
     width:100%!important;
     display:inline;
@@ -1018,7 +994,9 @@ html {
     display: flex;
     flex-direction: column;
 }
-#am-count {display:none;}
+#am-count {
+display:none;
+}
 #am-title,#am-title a {
     margin:0!important;
     font-size:25pt!important;
@@ -1050,7 +1028,9 @@ html {
 #loginform #sessioncheck {
     float: left;
 }
-#logo { display:none; }
+#logo {
+display:none;
+}
 #pageheader a {
     padding:5px;
     margin:3px;
@@ -1058,9 +1038,12 @@ html {
 #linklist li {
     padding:10px;
 }
-.paging_linksperpage {display:none;}
-
-.searchform {margin-bottom:5px;}
+.paging_linksperpage {
+display:none;
+}
+.searchform {
+margin-bottom:5px;
+}
 .searchform, .tagfilter {
     margin: 0px!important;
     padding: 8px !important;
@@ -1087,7 +1070,9 @@ div.qrcode {
     top: -10px;
     left: 0px;
 }
-.am-paging { position:relative; }
+.am-paging {
+position:relative;
+}
 .paging_linksperpage {
     float: none;
     margin-bottom: 10px;
@@ -1113,17 +1098,15 @@ div.dailyDate {
     font-size: 14pt;
 }
 
-.paging_older i ,.paging_newer i{ 
+.paging_older i ,.paging_newer i { 
     font-size: 14pt;
 }
-
 .paging_newer {
     float:right;
 }
 .paging_older {
     float:left;
 }
-
 .thumbnail {
     float: none;
     height: auto;
@@ -1133,11 +1116,9 @@ div.dailyDate {
 #cloudtag {
     padding: 5px;
 }
-
 div.dailyEntry { 
     padding:0px 3px 10px 3px;
 }
-
 #daily_col1, #daily_col2, #daily_col3 {
     float: none;
     width: 100%;
@@ -1168,7 +1149,6 @@ div#permalinkQrcode {
     border:none;
     border-radius:5px;
 }
-
 #footer {
     height: 120px;
 } 
