@@ -35,7 +35,9 @@ data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
 </div>
 
 </div>
-{include="page.footer"}
+{if="$source !== 'firefoxsocialapi'"}
+ {include="page.footer"}
+{/if}
 {if="($GLOBALS['config']['OPEN_SHAARLI'] || isLoggedIn())"}
 <script>
 $ = Awesomplete.$;
