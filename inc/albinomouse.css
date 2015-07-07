@@ -211,7 +211,6 @@ h1 {
     display:block;
     width:100%;
     margin:71px auto;
-	position:absolute;
 }
 #pageheader #am-title a {
     background:none;
@@ -745,6 +744,7 @@ width:100%
     top:0px;
     position:absolute;
     height:100%;
+    width:100%;
     padding:4px;
     font-size:7pt;
     color:#606060;
