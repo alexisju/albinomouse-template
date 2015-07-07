@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
 /*                                                                              */
-/* Version : 20150522                                                           */
+/* Version : 20150707                                                           */
 
 @font-face {
     font-family: "Open Sans";
@@ -142,7 +142,21 @@ h1 {
     color:#777777;
 }
 
-.linksperpage,.tagfilter,.searchform,.addform {
+#tagfilter_value, #searchform_value {
+    background-color: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    padding:5px;
+    border: none;
+    border-radius: 3px;
+    margin:10px 3px 3px 3px;
+    color:#777;
+}
+.tagfilter,.searchform {
+    display:inline;
+    border: 1px solid #DDDDDD;
+    border: none;
+}
+.linksperpage,.addform {
     background-color: #F7F7F7;
     display:inline;
     border: 1px solid #DDDDDD;
@@ -165,8 +179,23 @@ h1 {
     padding:5px;
 }
 .linksperpage input{
-    padding:0;
+    padding:2px;
+	width:45px;
 }
+.tagfilter div.awesomplete {
+    width: inherit;
+}
+
+.tagfilter #tagfilter_value {
+    width: 10%;
+    width: 100%;
+    display: inline;
+}
+
+.tagfilter li {
+    color: black;
+}
+
 .tagfilter input.bigbutton,.searchform input.bigbutton,.addform input.bigbutton{
     padding:0 5px 0 5px;
     margin:5px 0 5px 0;
@@ -181,7 +210,8 @@ h1 {
 #am-menu {
     display:block;
     width:100%;
-    margin:71px auto;  
+    margin:71px auto;
+	position:absolute;
 }
 #pageheader #am-title a {
     background:none;
@@ -330,6 +360,9 @@ h1 {
 #loginform  #sessioncheck {
     float:left;
 }
+#loginform label[for=longlastingsession] {
+	margin:10 0 0 40;
+}
 #sessioncheck  input {
     width:20px!important;
 }
@@ -342,10 +375,10 @@ h1 {
     opacity:1!important;
 }
 .addform {
-    padding:8px!important;
+    padding:9px!important;
 }
 .addform .bigbutton {
-    padding: 5px!important;
+    padding: 4px!important;
 }
 
 #toolsdiv { color:#777777; padding:5px 5px 5px 5px; clear:left; }
@@ -369,6 +402,7 @@ h1 {
 }
 #editlinkform label {
     color: #4C4B4A;
+	cursor: pointer;
 }
 #editlinkform textarea, #editlinkform input[type=text], .lf_input {
     width:97%;
@@ -1005,6 +1039,7 @@ display:none;
     height:auto;
     width: auto!important;
     margin:10px 5px!important;
+	position:relative;
 }
 #am-searchcontainer {
     float:none;
