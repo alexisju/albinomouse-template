@@ -39,17 +39,30 @@ data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
 {/if}
 {if="($GLOBALS['config']['OPEN_SHAARLI'] || isLoggedIn())"}
 <script>
-$ = Awesomplete.$;
-new Awesomplete($('input[data-multiple]'), {
-filter: function(text, input) {
-return Awesomplete.FILTER_CONTAINS(text, input.match(/[^ ]*$/)[0]);
-},
-replace: function(text) {
-var before = this.input.value.match(/^.+ \s*|/)[0];
-this.input.value = before + text + " ";
-},
-minChars: 1
-});
+    $ = Awesomplete.$;
+    awesomplete = new Awesomplete($('input[data-multiple]'), {
+        filter: function(text, input) {
+            return Awesomplete.FILTER_CONTAINS(text, input.match(/[^ ]*$/)[0]);
+        },
+        replace: function(text) {
+            var before = this.input.value.match(/^.+ \s*|/)[0];
+            this.input.value = before + text + " ";
+        },
+        minChars: 1
+    });
+    var input = document.querySelector('#lf_tags');
+    input.addEventListener('input', function()
+    {
+        proposedTags = input.getAttribute('data-list').replace(/,/g, '').split(' ');
+        reg = /(\w+) /g;
+        while((match = reg.exec(input.value)) !== null) {
+            id = proposedTags.indexOf(match[1]);
+            if(id != -1 ) {
+                proposedTags.splice(id, 1);
+            }
+        }
+        awesomplete.list = proposedTags;
+    });
 </script>
 {/if}
 </body>
