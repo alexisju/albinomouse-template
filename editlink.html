@@ -2,7 +2,6 @@
 <html>
 <head>{include="includes"}
 <link type="text/css" rel="stylesheet" href="inc/awesomplete.css" />
-<script src="inc/js/awesomplete.min.js"></script>
 </head>
 <body
 {if condition="$link.title==''"}onload="document.linkform.lf_title.focus();"
@@ -13,11 +12,11 @@
 <div id="editlinkform">
 <form method="post" name="linkform">
 <input type="hidden" name="lf_linkdate" value="{$link.linkdate}">
-<label for="lf_url"><i>URL</i></label><br><input type="text" name="lf_url" id="lf_url" value="{$link.url|htmlspecialchars}" class="lf_input"><br>
-<label for="lf_title"><i>Title</i></label><br><input type="text" name="lf_title" id="lf_title" value="{$link.title|htmlspecialchars}" class="lf_input"><br>
-<label for="lf_description"><i>Description</i></label><br><textarea name="lf_description" id="lf_description" rows="3" cols="25">{$link.description|htmlspecialchars}</textarea><br>
+<label for="lf_url"><i>URL</i></label><br><input type="text" name="lf_url" id="lf_url" value="{$link.url}" class="lf_input"><br>
+<label for="lf_title"><i>Title</i></label><br><input type="text" name="lf_title" id="lf_title" value="{$link.title}" class="lf_input"><br>
+<label for="lf_description"><i>Description</i></label><br><textarea name="lf_description" id="lf_description" rows="3" cols="25">{$link.description}</textarea><br>
 <label for="lf_tags"><i>Tags</i></label><br>
-<input type="text" id="lf_tags" name="lf_tags" id="lf_tags" value="{$link.tags|htmlspecialchars}" class="lf_input"
+<input type="text" id="lf_tags" name="lf_tags" value="{$link.tags}" class="lf_input"
 data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
 {if="($link_is_new && $GLOBALS['privateLinkByDefault']==true) || $link.private == true"}
 <input type="checkbox" checked="checked" name="lf_private" id="lf_private">
@@ -30,7 +29,7 @@ data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
 <input type="submit" value="Cancel" name="cancel_edit" class="bigbutton">
 {if="!$link_is_new"}<input type="submit" value="Delete" name="delete_link" class="bigbutton delete" onClick="return confirmDeleteLink();">{/if}
 <input type="hidden" name="token" value="{$token}">
-{if="$http_referer"}<input type="hidden" name="returnurl" value="{$http_referer|htmlspecialchars}">{/if}
+{if="$http_referer"}<input type="hidden" name="returnurl" value="{$http_referer}">{/if}
 </form>
 </div>
 
@@ -40,17 +39,30 @@ data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
 {/if}
 {if="($GLOBALS['config']['OPEN_SHAARLI'] || isLoggedIn())"}
 <script>
-$ = Awesomplete.$;
-new Awesomplete($('input[data-multiple]'), {
-filter: function(text, input) {
-return Awesomplete.FILTER_CONTAINS(text, input.match(/[^ ]*$/)[0]);
-},
-replace: function(text) {
-var before = this.input.value.match(/^.+ \s*|/)[0];
-this.input.value = before + text + " ";
-},
-minChars: 1
-});
+    $ = Awesomplete.$;
+    awesomplete = new Awesomplete($('input[data-multiple]'), {
+        filter: function(text, input) {
+            return Awesomplete.FILTER_CONTAINS(text, input.match(/[^ ]*$/)[0]);
+        },
+        replace: function(text) {
+            var before = this.input.value.match(/^.+ \s*|/)[0];
+            this.input.value = before + text + " ";
+        },
+        minChars: 1
+    });
+    var input = document.querySelector('#lf_tags');
+    input.addEventListener('input', function()
+    {
+        proposedTags = input.getAttribute('data-list').replace(/,/g, '').split(' ');
+        reg = /(\w+) /g;
+        while((match = reg.exec(input.value)) !== null) {
+            id = proposedTags.indexOf(match[1]);
+            if(id != -1 ) {
+                proposedTags.splice(id, 1);
+            }
+        }
+        awesomplete.list = proposedTags;
+    });
 </script>
 {/if}
 </body>

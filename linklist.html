@@ -21,7 +21,7 @@
         {if="$search_type=='tags'"}
             <div id="searchcriteria">{$result_count} results for tags
             {loop="search_crits"}
-                <span class="linktag" title="Remove tag"> <a href="?removetag={$value|htmlspecialchars}">{$value|htmlspecialchars} <span id="searchcriteria_result"><i class="glyphicon glyphicon-remove"></i></span></a></span>
+                <span class="linktag" title="Remove tag"> <a href="?removetag={$value}">{$value} <span id="searchcriteria_result"><i class="glyphicon glyphicon-remove"></i></span></a></span>
             {/loop}</div>
         {/if}
     {/if}
@@ -38,11 +38,11 @@
                         <input type="hidden" name="token" value="{$token}"><input type="hidden" name="delete_link"><input type="image" alt="Delete" src="inc/img/delete_icon.png" title="Delete" class="button_delete" onClick="return confirmDeleteLink();"></form>
                     </div>
                 {/if}
-                <span class="linktitle"><a href="{$redirector}{$value.url|htmlspecialchars}">{$value.title|htmlspecialchars}</a></span><br>
-                        <span class="linkurl" title="Direct link"><i class="glyphicon glyphicon-link"></i> <a href="{$value.url|htmlspecialchars}">{$value.url|htmlspecialchars}</a></span>
+                <span class="linktitle"><a href="{$redirector}{$value.url}">{$value.title}</a></span><br>
+                        <span class="linkurl" title="Direct link"><i class="glyphicon glyphicon-link"></i> <a href="{$value.url}">{$value.url}</a></span>
                 {if="$value.tags"}
                     <div class="linktaglist">
-                    {loop="value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i> <a href="?addtag={$value|urlencode}">{$value|htmlspecialchars}</a> </span> {/loop}
+                    {loop="value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i> <a href="?addtag={$value|urlencode}">{$value}</a> </span> {/loop}
                     </div>
                 {/if}
                 <div class="linkdescription">{if="$value.description"}{$value.description}{/if}</div>
@@ -56,7 +56,7 @@
                     <span class="linkdate" title="Short link here"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}"></a> - </span>
                 {/if}
                 {if="$GLOBALS['config']['ARCHIVE_ORG']"}
-                <span class="linkarchive"><a href="https://web.archive.org/web/{$value.url|htmlspecialchars}">archive</a> - </span>
+                <span class="linkarchive"><a href="https://web.archive.org/web/{$value.url}">archive</a> - </span>
                 {/if}
                 <div class="linkqrcode"><a href="http://qrfree.kaywa.com/?l=1&amp;s=8&amp;d={$scripturl|urlencode}%3F{$value.linkdate|smallHash}"
                     onclick="return showQrCode(this);" class="qrcode" data-permalink="{$scripturl}?{$value.linkdate|smallHash}"> <i class="glyphicon glyphicon-qrcode"></i></a></div><br>
