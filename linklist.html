@@ -59,10 +59,8 @@
                 <span class="linkarchive"><a href="https://web.archive.org/web/{$value.url}">archive</a> - </span>
                 {/if}
                 <div class="linkqrcode"><a href="http://qrfree.kaywa.com/?l=1&amp;s=8&amp;d={$scripturl|urlencode}%3F{$value.linkdate|smallHash}"
-                    onclick="return showQrCode(this);" class="qrcode" data-permalink="{$scripturl}?{$value.linkdate|smallHash}"> <i class="glyphicon glyphicon-qrcode"></i></a></div><br>
-                </div>
-
-<div class="am-partagesocial"><i class="glyphicon glyphicon-share"></i>&nbsp; 
+                    onclick="return showQrCode(this);" class="qrcode" data-permalink="{$scripturl}?{$value.linkdate|smallHash}"> <i class="glyphicon glyphicon-qrcode"></i></a></div>
+<div class="am-partagesocial"><i class="glyphicon glyphicon-send"></i>&nbsp; 
 <a target="_blank" title="Diaspora*" href="http://sharetodiaspora.github.io/?url={$value.url|rawurlencode}&amp;title={$value.title|rawurlencode}" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">diaspora*</a> &middot; 
 <a target="_blank" title="Twitter" href="https://twitter.com/share?url={$value.url|rawurlencode}&amp;text={$value.title|rawurlencode(str_replace('|','-',$value.title));}" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">twitter</a> &middot; 
 <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u={$value.url|rawurlencode}&amp;t={$value.title|rawurlencode}" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">facebook</a> &middot; 
@@ -72,7 +70,7 @@
 <a target="_blank" title="Scoop.it" href="http://www.scoop.it/oexchange/share?url={$value.url|rawurlencode}&amp;title={$value.title|rawurlencode}" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=800px,width=1150px');return false;">scoop.it</a> &middot; 
 <a target="_blank" title="Envoyer par mail" href="mailto:?subject={$value.title|rawurlencode}&amp;body={$value.url|rawurlencode}" rel="nofollow">courriel</a>
 </div><br> 
-
+</div>
         </li>
     {/loop}
     </ul>
@@ -131,7 +129,7 @@ function showQrCode(caller,loading)
     if (image)
     {
         element.appendChild(image);
-        element.innerHTML+= "<br>Click to close";
+        element.innerHTML+= "";
         caller.parentNode.appendChild(element);
     }
     else
@@ -141,5 +139,6 @@ function showQrCode(caller,loading)
     return false;
 }
 </script>
+
 </body>
 </html>

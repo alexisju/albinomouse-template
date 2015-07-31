@@ -148,7 +148,7 @@ h1 {
     padding:5px;
     border: none;
     border-radius: 3px;
-    margin:10px 3px 3px 3px;
+    margin: 5px 3px 3px 3px;
     color:#777;
 }
 .tagfilter,.searchform {
@@ -160,7 +160,6 @@ h1 {
     background-color: #F7F7F7;
     display:inline;
     border: 1px solid #DDDDDD;
-    padding:5px;
     border: none;
     border-radius: 3px;
     margin:10px 3px 3px 3px;
@@ -168,8 +167,9 @@ h1 {
 }
 .linksperpage {
     background-color: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    padding: 0px;
+    border-bottom: 1px dotted #DDDDDD;
+    padding-bottom: 2px;
+    border-radius: 0px;
 }
 .linksperpage input,.tagfilter input, .searchform input, .addform input{
     border:none;
@@ -324,7 +324,7 @@ h1 {
 }
 #am-searchcontainer {
     float: right;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 .searchform input {
     width: 250px!important;
@@ -426,18 +426,22 @@ width:100%
     margin-bottom:2px;
 }
 .am-partagesocial {
-    padding-top:2px;
     position:relative;
     display:inline;
     font-size:11pt;
+    opacity:0.3;
+    float:right;
 }
 .am-partagesocial a {
     text-decoration:none;
     color:#4C4B4A;
 }
+.am-partagesocial:hover {
+    opacity:1;
+    transition: all 0.5s ease-in-out 0s;
+}
 .am-partagesocial a:hover {
     color:#C93030;
-    transition: all 0.2s ease-in-out 0s;
 }
 #linklist li.private {
     background-color:rgba(247, 247, 247, 0.54);
@@ -491,7 +495,7 @@ width:100%
 }
 .linkurl:hover, .linkurl a:hover { 
     opacity:1;
-    transition: opacity 1s ease-in-out 0s;
+    transition: opacity 0.5s ease-in-out 0s;
 }
 .linkarchive a {
     font-size:11pt; 
@@ -771,20 +775,27 @@ div.qrcode {
 }
 
 div#permalinkQrcode {
-    background-color: #FFFFFF;
-    border: 0px solid #777777;
-    border-radius:5px;
-    box-shadow: 2px 2px 20px 2px #333333;
-    font-size: 8pt;
-    height: 220px;
-    left: -100px;
-    padding: 20px;
-    position: absolute;
-    text-align: center;
-    top: -100px;
-    width: 220px;
     z-index: 50;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    padding-top: 20%;
+    text-align:center;
 }
+
+
+
+div#permalinkQrcode img {
+    clip: rect(auto 174px 174px auto)!important;
+    position: absolute!important;
+    left:45%
+}
+
+
 
 /* --- Daily CSS --- */  
 div.daily {                                              
