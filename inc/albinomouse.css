@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
 /*                                                                              */
-/* Version : 20150707                                                           */
+/* Version : 20150803                                                           */
 
 @font-face {
     font-family: "Open Sans";
@@ -324,7 +324,7 @@ h1 {
 }
 #am-searchcontainer {
     float: right;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 .searchform input {
     width: 250px!important;
