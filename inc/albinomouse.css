@@ -790,7 +790,6 @@ div#permalinkQrcode {
 
 
 div#permalinkQrcode img {
-    clip: rect(auto 174px 174px auto)!important;
     position: absolute!important;
     left:45%
 }
