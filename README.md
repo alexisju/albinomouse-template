@@ -21,7 +21,7 @@ $GLOBALS['config']['RAINTPL_TPL'] = 'tpl/albinomouse-template/';
 
 Vous trouverez plus d'information à ce sujet sur le [wiki du Shaarli communautaire] (https://github.com/shaarli/Shaarli/wiki/Theming)
 
-**Important** : Pour utiliser ce template, vous devez utiliser la **[dernière version communautaire de Shaarli](https://github.com/shaarli/Shaarli)**.
+**Important** : Pour utiliser ce template, vous devez utiliser la **[dernière version stable communautaire de Shaarli](https://github.com/shaarli/Shaarli)** (min v. 0.6.1). 
 
 ### Conseils d'utilisation ###
 
