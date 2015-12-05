@@ -6,8 +6,6 @@ Démo (frontend) : https://liens.effingo.be
 
 Dépôt GitHub : https://github.com/alexisju/albinomouse-template/
 
-Téléchargement : https://github.com/alexisju/albinomouse-template/archive/master.zip
-
 
 ### Installation ###
 Dans votre répertoire tpl/, téléchargez et décompressez l'[archive zip du template](https://github.com/alexisju/albinomouse-template/archive/master.zip) ou lancez la commande `git clone https://github.com/alexisju/albinomouse-template.git`
@@ -21,13 +19,15 @@ $GLOBALS['config']['RAINTPL_TPL'] = 'tpl/albinomouse-template/';
 
 Vous trouverez plus d'information à ce sujet sur le [wiki du Shaarli communautaire] (https://github.com/shaarli/Shaarli/wiki/Theming)
 
-**Important** : Pour utiliser ce template, vous devez utiliser la **[dernière version stable communautaire de Shaarli](https://github.com/shaarli/Shaarli)** (min v. 0.6.1). 
+**Important** : Ce template est destiné à être utilisé avec la **[dernière version stable du fork communautaire de Shaarli](https://github.com/shaarli/Shaarli/releases)**.
 
 ### Conseils d'utilisation ###
 
-Afin que ce template s'adapte à vos besoins, je vous conseille de modifier le fichier `page.header.html` après son installation. Vous pourrez ainsi personnaliser les boutons de navigations. Ils sont destinés à renvoyer vers des url externes (vers votre blog, vers votre page de contact, etc). 
+Depuis la version 0.6.0 le [système de plugin](https://github.com/shaarli/Shaarli/wiki/Plugin-System) est maintenant opérationel et intégré à ce template. Vous pouvez par exemple vous en servir pour créer un menu personnalisé qui vous permettra de faire la mise à jour du template plus facilement.
 
-Vous pouvez personnaliser les icônes du menu facilement grâce à [Glyphicon](http://getbootstrap.com/components/#glyphicons).
+Vous pouvez adapter le [plugin que j'utilise pour mon installation personnelle de Shaarli](https://github.com/alexisju/menu).
+
+Les icônes du menu sont personnalisables grâce à [Glyphicon](http://getbootstrap.com/components/#glyphicons).
 
 Remarque : certains éléments du menus sont volontairement masqués lorsque vous êtes connecté à Shaarli (classe CSS "cachemoi") pour laisser place à d'autres options utiles. 
 
