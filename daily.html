@@ -18,7 +18,7 @@
     <div class="dailyDate"><span class="nomobile">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span><a href="?do=daily">{function="strftime('%A %d %B %Y', $day)"}</a> <span class="nomobile">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span></div>
     <div id="dailyPaging">
     <div class="am-paging"><a href="?" title="Linklist">liste</a> | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> | <a href="{$feedurl}?do=dailyrss{$searchcrits}" class="nomobile" title="Daily RSS Feed">daily rss</a></div>
-    {if="$previousday"} <a href="?do=daily&amp;day={$previousday}"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;&nbsp; jour précédent</a>{else}{/if} {if="$nextday"} &nbsp;-&nbsp; <a href="?do=daily&amp;day={$nextday}">jour suivant &nbsp;&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i></a>{else}{/if}
+   &nbsp; {if="$previousday"} <a href="?do=daily&amp;day={$previousday}"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;&nbsp; jour précédent</a>{else}{/if} {if="$nextday"} &nbsp;-&nbsp; <a href="?do=daily&amp;day={$nextday}">jour suivant &nbsp;&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i></a>{else}{/if}
     </div>
 
     <div style="clear:both;"></div>

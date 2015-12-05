@@ -8,7 +8,7 @@
 	</form>
 </div>
 {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
-    <style TYPE="text/css">#pageheader{margin-top:-10px;width:100%;} #am-header{height:100px;} #am-count{display:none;}</style>
+    <style type="text/css">#pageheader{margin-top:-10px;width:100%;} #am-header{height:100px;} #am-count{display:none;}</style>
     {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
 {else}
 <div id="am-menu">
@@ -16,7 +16,7 @@
         {$value}
     {/loop}
   {if="isLoggedIn()"}
-    <style TYPE="text/css">.am-hide {display:none;}</style>
+    <style type="text/css">.am-hide {display:none;}</style>
     <a id="activeAddlink" href="?do=addlink"><i class="glyphicon glyphicon-plus-sign"></i>  nouveau lien</a>
     <a id="activeOptions" href="?do=tools"><i class="glyphicon glyphicon-cog"></i> options</a>
     <a href="?do=logout"><i class="glyphicon glyphicon-log-out"></i> logout</a>
