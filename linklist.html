@@ -44,7 +44,7 @@
                         <input type="hidden" name="token" value="{$token}"><input type="hidden" name="delete_link"><input type="image" alt="Delete" src="inc/img/delete_icon.png" title="Delete" class="button_delete" onClick="return confirmDeleteLink();"></form>
                     </div>
                 {/if}
-                <span class="linktitle"><a href="{$redirector}{$value.url}">{$value.title}</a></span><br>
+                <span class="linktitle"><a href="{$value.real_url}">{$value.title}</a></span><br>
                         <span class="linkurl" title="Direct link"><i class="glyphicon glyphicon-link"></i> <a href="{$value.url}">{$value.url}</a></span>
                 {if="$value.tags"}
                     <div class="linktaglist">
