@@ -12,11 +12,9 @@
     {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
 {else}
 <div id="am-menu">
-    <a href="?" id="activeLinklist"><i class="glyphicon glyphicon-home"></i> shaarli</a>
-    <a href="#"><i class="glyphicon glyphicon-bullhorn"></i> link 1</a>
-    <a href="#"><i class="glyphicon glyphicon-align-justify"></i> link 2</a>
-    <a href="#" class="am-hide"><i class="glyphicon glyphicon-info-sign"></i> link 3</a>
-    <a href="#" class="am-hide"><i class="glyphicon glyphicon-envelope"></i> link 4</a>
+    {loop="$plugins_header.buttons_toolbar"}
+        {$value}
+    {/loop}
   {if="isLoggedIn()"}
     <style TYPE="text/css">.am-hide {display:none;}</style>
     <a id="activeAddlink" href="?do=addlink"><i class="glyphicon glyphicon-plus-sign"></i>  nouveau lien</a>
@@ -27,9 +25,6 @@
   {else}
     <a id="activeLogin" href="?do=login"><i class="glyphicon glyphicon-log-in"></i> login</a>
   {/if}
-    {loop="$plugins_header.buttons_toolbar"}
-        {$value}
-    {/loop}
 </div>
 {/if}
 </div>
