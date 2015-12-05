@@ -30,6 +30,9 @@
   {else}
     <a id="activeLogin" href="?do=login"><i class="glyphicon glyphicon-log-in"></i> login</a>
   {/if}
+    {loop="$plugins_header.buttons_toolbar"}
+        {$value}
+    {/loop}
 </div>
 {/if}
 </div>

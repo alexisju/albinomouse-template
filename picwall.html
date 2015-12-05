@@ -10,6 +10,12 @@
 </div>
 <div id="am-container">
 
+<div id="plugin_zone_start_picwall" class="plugin_zone">
+    {loop="$plugin_start_zone"}
+        {$value}
+    {/loop}
+</div>
+
 <div id="linklist"><div class="paging"><div class="am-paging"><a href="?" title="Linklist">liste</a> | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="RSS Feed">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="Atom Feed">atom</a>{/if}</div><br></div>
 </div>
 
@@ -20,6 +26,14 @@
 </div>
 {/loop}
 </div>
+</div>
+
+<div class="clear"></div>
+
+<div id="plugin_zone_end_picwall" class="plugin_zone">
+    {loop="$plugin_end_zone"}
+        {$value}
+    {/loop}
 </div>
 
 {include="page.footer"}

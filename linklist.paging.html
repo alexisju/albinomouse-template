@@ -1,7 +1,7 @@
 <div class="paging">
 
 <div class="am-paging nomobile">
-<a href="?" title="Linklist">liste</a> {if="isLoggedIn()"}<a href="?privateonly">{if="$privateonly"}(tous les liens){else}(liens privés){/if}</a>{/if} | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="RSS Feed">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="Atom Feed">atom</a>{/if}
+<a href="?" title="Linklist">liste</a> {if="isLoggedIn()"}<a href="?privateonly">{if="$privateonly"}(tous les liens){else}(liens privés){/if}</a>{/if} | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="RSS Feed">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="Atom Feed">atom</a>{/if} {loop="$action_plugin"} {$value} {/loop}
 </div>
 
     <div class="paging_linksperpage">
@@ -11,4 +11,5 @@
     {if="$previous_page_url"} <a href="{$previous_page_url}" class="paging_older">&nbsp;<i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;</a> {/if}
     <div class="paging_current">page {$page_current} / {$page_max} </div>
     {if="$next_page_url"} <a href="{$next_page_url}" class="paging_newer">&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp;</a> {/if}
+
 </div>

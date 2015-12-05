@@ -21,6 +21,11 @@
 <label for="lf_tags"><i>Tags</i></label><br>
 <input type="text" id="lf_tags" name="lf_tags" value="{$link.tags}" class="lf_input"
 data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
+           
+           {loop="$edit_link_plugin"}
+                {$value}
+            {/loop}
+
 {if="($link_is_new && $GLOBALS['privateLinkByDefault']==true) || $link.private == true"}
 <input type="checkbox" checked="checked" name="lf_private" id="lf_private">
 &nbsp;<label for="lf_private"><i>Private</i></label><br>
@@ -40,31 +45,10 @@ data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
  {include="page.footer"}
 {/if}
 {if="($GLOBALS['config']['OPEN_SHAARLI'] || isLoggedIn())"}
+<script src="inc/awesomplete.min.js#"></script>
+<script src="inc/awesomplete-multiple-tags.js#"></script>
 <script>
-    $ = Awesomplete.$;
-    awesomplete = new Awesomplete($('input[data-multiple]'), {
-        filter: function(text, input) {
-            return Awesomplete.FILTER_CONTAINS(text, input.match(/[^ ]*$/)[0]);
-        },
-        replace: function(text) {
-            var before = this.input.value.match(/^.+ \s*|/)[0];
-            this.input.value = before + text + " ";
-        },
-        minChars: 1
-    });
-    var input = document.querySelector('#lf_tags');
-    input.addEventListener('input', function()
-    {
-        proposedTags = input.getAttribute('data-list').replace(/,/g, '').split(' ');
-        reg = /(\w+) /g;
-        while((match = reg.exec(input.value)) !== null) {
-            id = proposedTags.indexOf(match[1]);
-            if(id != -1 ) {
-                proposedTags.splice(id, 1);
-            }
-        }
-        awesomplete.list = proposedTags;
-    });
+    awesompleteUniqueTag('#lf_tags');
 </script>
 {/if}
 </body>
