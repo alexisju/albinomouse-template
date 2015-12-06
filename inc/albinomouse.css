@@ -282,14 +282,12 @@ h1 {
     float: left;
     margin: 0px 5px;
 }
-
 .paging { 
     border-bottom: 1px solid #E0E2E2;
     clear: both;
     color: #777777;
     font-size: 11pt;
     padding: 10px 5px;
-    text-align: center;
 }
 .paging a:link { 
     color:#777777; 
@@ -306,7 +304,13 @@ h1 {
 }
 .am-paging {
     float:left;
+    position:absolute;
     margin-top:0px;
+}
+.am-pages {
+    width:200px;
+    text-align:center;
+    margin:0 auto;
 }
 .paging_linksperpage { 
     float:right; 
