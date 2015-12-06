@@ -10,13 +10,13 @@
 
 <div id="linklist">
 
-    {include="linklist.paging"}
+        <div id="plugin_zone_start_linklist" class="plugin_zone">
+        {loop="$plugin_start_zone"}
+        {$value}
+        {/loop}
+        </div>
 
-    <div id="plugin_zone_start_linklist" class="plugin_zone">
-{loop="$plugin_start_zone"}
-{$value}
-{/loop}
-</div>
+        {include="linklist.paging"}
 
 {if="count($links)==0"}
         <div id="searchcriteria">Nothing found.</i></div>
@@ -70,13 +70,13 @@
     </ul>
 
     {include="linklist.paging"}
+    
+        <div id="plugin_zone_end_linklist" class="plugin_zone">
+        {loop="$plugin_end_zone"}
+            {$value}
+        {/loop}
+        </div>
 
-</div>
-
-<div id="plugin_zone_end_linklist" class="plugin_zone">
-            {loop="$value.link_plugin"} 
-            <span>{$value} </span>
-            {/loop}
 </div>
 
     {include="page.footer"}

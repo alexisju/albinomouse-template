@@ -75,15 +75,20 @@
     {else}
          <div class="dailyNoEntry">Pas d'articles aujourd'hui!</div>
     {/if}
+       
+    <div id="closing"></div>
     
-    <div id="plugin_zone_end_picwall" class="plugin_zone">
+    </div>
+
+<div class="clear"></div>
+
+<div id="plugin_zone_end_picwall" class="plugin_zone">
         {loop="$plugin_end_zone"}
             {$value}
         {/loop}
-    </div>
-    
-    <div id="closing"></div>
 </div>
-{include="page.footer"}
-</body>
+    
+ {include="page.footer"}
+
+ </body>
 </html>

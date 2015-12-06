@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                   */
 /*                                                                              */
-/* Version : 20150803                                                           */
+/* Version : 20151206                                                           */
 
 @font-face {
     font-family: "Open Sans";
@@ -278,6 +278,11 @@ h1 {
 	top: 4px;
 }
 
+.am-action_plugin {
+    float: left;
+    margin: 0px 5px;
+}
+
 .paging { 
     border-bottom: 1px solid #E0E2E2;
     clear: both;
@@ -300,8 +305,7 @@ h1 {
     color:#c93030;  
 }
 .am-paging {
-    float:none;
-    position:absolute; 
+    float:left;
     margin-top:0px;
 }
 .paging_linksperpage { 
@@ -497,14 +501,6 @@ width:100%
     opacity:1;
     transition: opacity 0.5s ease-in-out 0s;
 }
-.linkarchive a {
-    font-size:11pt; 
-    color:#4C4B4A;
-    text-decoration:none!important;
-}
-.linkarchive a:hover {
-    color:#C93030;
-}
 .linkdescription { 
     color:#4C4B4A; 
     margin-bottom:15px; 
@@ -519,10 +515,6 @@ width:100%
 }
 .linkdescription a:hover { 
     color:#C93030;
-}
-.linkqrcode {
-    display: inline;
-    position: relative;
 }
 .linktaglist { 
     padding-top:2px;
@@ -760,42 +752,6 @@ width:100%
     background: #ffffff;
 }
 
-div.qrcode {
-    width:220px;
-    height:220px;
-    background-color: #ffffff;
-    border: 1px solid #777777 ;
-    position: absolute;
-    top:-100px;
-    left:-100px;
-    text-align:center;
-    font-size: 9pt;
-    z-index:50;
-    box-shadow:2px 2px 20px 2px #333333;
-}
-
-div#permalinkQrcode {
-    z-index: 50;
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.88);
-    padding-top: 20%;
-    text-align:center;
-}
-
-
-
-div#permalinkQrcode img {
-    position: absolute!important;
-    left:45%
-}
-
-
-
 /* --- Daily CSS --- */  
 div.daily {                                              
     background-color: #FFFFFF;
@@ -1004,6 +960,16 @@ a {
 }
 }
 
+/* Highlight search results */
+.highlight {
+    background-color: #FFFF33;
+}
+
+ul.errors {
+    color: red;
+    float: left;
+}
+
 /* ---------------------- Responsive Albinomouse Template --------------------------------------------------*/
 
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 854px) {
@@ -1058,6 +1024,9 @@ display:none;
 #am-searchcontainer input {
     width:250px!important;
 }
+#am-searchcontainer label {
+    cursor: pointer;
+}
 #loginform {
     background-color: #FFFFFF;
     clear: both;
@@ -1108,12 +1077,6 @@ margin-bottom:5px;
 }
 #tagfilter_value {
     width: 95% !important;
-}
-div.qrcode {
-    position: relative;
-    float: left;
-    top: -10px;
-    left: 0px;
 }
 .am-paging {
 position:relative;
