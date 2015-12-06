@@ -52,14 +52,13 @@
                     </div>
                 {/if}
                 <div class="linkdescription">{if="$value.description"}{$value.description}{/if}</div>
-                <div class="clear"></div>
                 {if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}
 		{if="isLoggedIn()"}	
 		<span class="linkdate" title="Permalink"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}">{function="strftime('%A %d %B %Y à %k:%m', $value.timestamp)"}</a> - </span>
 		{else}
 		<span class="linkdate" title="Permalink"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}">{function="strftime('%A %d %B %Y', $value.timestamp)"}</a> - </span>
 		{/if}
-                <span class="am-link_plugin">{loop="$value.link_plugin"}<span>{$value}</span>{/loop}</span>
+                <span class="am-link_plugin">{loop="$value.link_plugin"}<span>{$value}</span>{/loop}</span><div class="clear"></div>
                 {else}
                     <span class="linkdate" title="Short link here"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}"></a> - </span>
                 {/if}
