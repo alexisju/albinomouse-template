@@ -4,17 +4,15 @@
 <a href="?" title="Linklist">liste</a> {if="isLoggedIn()"}<a href="?privateonly">{if="$privateonly"}(tous les liens){else}(liens privés){/if}</a>{/if} | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="RSS Feed">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="Atom Feed">atom</a> {/if} <div class="am-action_plugin">{loop="$action_plugin"} {$value}{/loop}</div>
 </div>
 
-<div class="am-pages">
-    {if="$previous_page_url"} <a href="{$previous_page_url}" class="paging_older">&nbsp;<i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;</a> {/if}
-    <div class="paging_current">page {$page_current} / {$page_max} </div>
-    {if="$next_page_url"} <a href="{$next_page_url}" class="paging_newer">&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp;</a> {/if}
-</div>
-
 <div class="paging_linksperpage">
         <a href="?linksperpage=20">20</a> | <a href="?linksperpage=50">50</a> | <a href="?linksperpage=100">100</a> | 
         <form class="linksperpage" method="GET" style="display:inline;"><input name="linksperpage" type="number" min="1" step="any" autocomplete="on" placeholder="150"></form>
 </div>
 
-
+<div class="am-pages">
+    {if="$previous_page_url"} <a href="{$previous_page_url}" class="paging_older">&nbsp;<i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;</a> {/if}
+    <div class="paging_current">page {$page_current} / {$page_max} </div>
+    {if="$next_page_url"} <a href="{$next_page_url}" class="paging_newer">&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp;</a> {/if}
+</div>
 
 </div>
