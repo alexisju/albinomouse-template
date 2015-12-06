@@ -5,13 +5,15 @@
 </script>
 
 <div id="footer">
+<div class="am-plugin_footer">{loop="$plugins_footer.text"} {$value}{/loop}</div>
     <b><a href="https://github.com/shaarli/Shaarli">Shaarli</a></b> - The personal, minimalist, super-fast, no-database delicious clone<br>
 	<a href="https://github.com/shaarli/Shaarli">Community friendly fork</a> {if="isLoggedIn()"}(version {$version}){/if} | <a href="doc/Home.html">Help / documentation</a><br>
     <a href="https://github.com/alexisju/albinomouse-template" target="_blank">AlbinoMouse Template</a> by <a href="https://effingo.be/" target="_blank">alexisju</a> <br/>
-{loop="$plugins_footer.text"}
-    {$value}
-{/loop}
 </div>
+
+{loop="$plugins_footer.js_files"}
+    <script src="{$value}#"></script>
+{/loop}
 
 {if="$newVersion"}
 <div id="newversion">
@@ -27,6 +29,3 @@
 {if="isLoggedIn()"}
 <script>function confirmDeleteLink() { var agree=confirm("Are you sure you want to delete this link ?"); if (agree) return true ; else return false ; }</script>
 {/if}
-{loop="$plugins_footer.js_files"}
-    <script src="{$value}#"></script>
-{/loop}
