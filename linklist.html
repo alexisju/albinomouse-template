@@ -58,9 +58,7 @@
 		{else}
 		<span class="linkdate" title="Permalink"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}">{function="strftime('%A %d %B %Y', $value.timestamp)"}</a> - </span>
 		{/if}
-                {loop="$value.link_plugin"}
-                <span>{$value}</span>
-                {/loop}
+                <span class="am-link_plugin">{loop="$value.link_plugin"}<span>{$value}</span>{/loop}</span>
                 {else}
                     <span class="linkdate" title="Short link here"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.linkdate|smallHash}"></a> - </span>
                 {/if}

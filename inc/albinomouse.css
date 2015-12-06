@@ -487,6 +487,11 @@ width:100%
 .linkdate a:hover { 
     color: #C93030;
 }
+.am-link_plugin div {
+   position:relative;
+   display:inline;     
+}
+
 .linkurl { 
     font-size:11pt; 
     color:#4C4B4A;
