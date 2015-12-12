@@ -637,15 +637,17 @@ width:100%
 }
 
 #footer {
+    position:absolute;
+    width:100%;
     background-color: #C93030;
     clear: both;
     color: #FFFFFF;
     font-size: 10pt;
     height: auto;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
-#footer  a{ color:#FFFFFF!important;
+#footer  a { color:#FFFFFF!important;
     text-decoration:none;
     font-weight:bold;
     padding:0!important;
