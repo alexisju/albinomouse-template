@@ -18,7 +18,6 @@
   {if="isLoggedIn()"}
     <style type="text/css">.am-hide {display:none;}</style>
     <a id="activeAddlink" href="?do=addlink"><i class="glyphicon glyphicon-plus-sign"></i>  nouveau lien</a>
-    <a id="activeOptions" href="?do=tools"><i class="glyphicon glyphicon-cog"></i> options</a>
     <a href="?do=logout"><i class="glyphicon glyphicon-log-out"></i> logout</a>
     {elseif="$GLOBALS['config']['OPEN_SHAARLI']"}
     <a id="activeOptions" href="?do=tools">options</a><a href="?do=addlink"><i class="glyphicon glyphicon-plus-sign"></i> nouveau lien</a>

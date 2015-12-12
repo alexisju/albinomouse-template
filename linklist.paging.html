@@ -1,13 +1,41 @@
 <div class="paging">
 
 <div class="am-paging nomobile">
-<a href="?" title="Linklist">liste</a> {if="isLoggedIn()"}<a href="?privateonly">{if="$privateonly"}(tous les liens){else}(liens privés){/if}</a>{/if} | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> | <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="RSS Feed">rss</a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="Atom Feed">atom</a> {/if} <div class="am-action_plugin">{loop="$action_plugin"} {$value}{/loop}</div>
+<a href="?" title="Linklist">liste</a> {if="isLoggedIn()"}<a href="?privateonly">{if="$privateonly"}(tous les liens){else}(liens privés){/if}</a>{/if} | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> <div class="am-action_plugin">{loop="$action_plugin"} {$value}{/loop}</div>
 </div>
 
+<div class="menu-droit">
+
 <div class="paging_linksperpage">
-        <a href="?linksperpage=20">20</a> | <a href="?linksperpage=50">50</a> | <a href="?linksperpage=100">100</a> | 
-        <form class="linksperpage" method="GET" style="display:inline;"><input name="linksperpage" type="number" min="1" step="any" autocomplete="on" placeholder="150"></form>
+    <ul class="dropdown-menu">
+	<li>
+		<a href="#"><i class="glyphicon glyphicon-filter"></i></a>
+		<div class="dropdownContain">
+		<div class="dropOut">
+			<ul class="dropdown-menu">
+                               <li><a href="?linksperpage=20">20 liens</a></li>
+                               <li><a href="?linksperpage=50">50 liens</a></li>
+                                <li><a href="?linksperpage=100">100 liens</a></li>
+                                <li><form class="linksperpage" method="GET" style="display:inline;"><input name="linksperpage" type="text"  autocomplete="on" placeholder="valeur libre"></form></li>
+			</ul>
+			</div>
+		</div>
+	</li>
+    </ul>
 </div>
+
+ {if="isLoggedIn()"}
+<div class="paging_options">
+    <a id="activeOptions" href="?do=tools"><i class="glyphicon glyphicon-cog"></i></a>
+</div>
+{/if}
+  
+<div class="paging_rss">
+        <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="rss feed"><img class="glyphicon" alt="rss" src="inc/img/feed-icon-fa.png" title="rss feed"></a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="atom feed"><img class="glyphicon"  alt="atom" src="inc/img/feed-icon-fa.png" title="atom feed"></a> {/if} 
+</div>
+
+</div>
+
 
 <div class="am-pages">
     {if="$previous_page_url"} <a href="{$previous_page_url}" class="paging_older">&nbsp;<i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;</a> {/if}

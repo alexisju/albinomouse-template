@@ -1,8 +1,8 @@
-/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli        */
+/* Cascading Stylesheet for Shaarli - https://github.com/shaarli/Shaarli           */
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
-/* Sources : https://github.com/alexisju/albinomouse-template                   */
-/*                                                                              */
-/* Version : 20151206                                                           */
+/* Sources : https://github.com/alexisju/albinomouse-template                       */
+/*                                                                                                                                */
+/* Version : 20151212                                                                                               */
 
 @font-face {
     font-family: "Open Sans";
@@ -96,6 +96,7 @@ h1 {
     float: right;
     padding: 6px;
     position: relative;
+    z-index: 1;
 }
 .button_edit, .button_delete {
       opacity:0.75
@@ -156,6 +157,35 @@ h1 {
     border: 1px solid #DDDDDD;
     border: none;
 }
+
+.menu-droit {
+    float:right;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width:65px;
+     flex-basis:20px;
+}
+.menu-droit .glyphicon {
+    opacity:0.7;
+}
+.menu-droit .glyphicon:hover {
+    opacity:1;
+}
+
+.paging_linksperpage { 
+    margin: 0 5px;
+}
+
+.paging_options {
+    margin: 0 5px;
+}
+
+.paging_rss {
+    padding-top:1px;
+    margin: 0 5px;
+}
+
 .linksperpage,.addform {
     background-color: #F7F7F7;
     display:inline;
@@ -180,8 +210,77 @@ h1 {
 }
 .linksperpage input{
     padding:2px;
-	width:45px;
+    width:85px;
 }
+
+.dropdown-menu ul li {
+        cursor: pointer;
+        transition: padding .05s linear;
+}
+.dropdown-menu ul > li {
+        display: inline-block;
+}
+.dropdown-menu ul li a:hover {
+        color: #C93030;
+}
+.dropdownContain {
+        position: asolute;
+        z-index: 2;
+        left: 70%;
+        margin-left: -80px; 
+        top: -360px;
+        margin-top:15px;
+}
+.dropOut {
+        width: 95px;
+        float: left;
+        position: absolute;
+        margin-top: 0px;
+        padding:12px;
+        opacity: 0;
+        transition: all .1s ease-out;
+        z-index: 10;
+        background: #FFFFFF;
+        border: #DDDDDD solid 2px;
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+}
+.dropOut:after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 13px 17px;
+        border-color: #FFFFFF transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        top: -16px;
+        left: 72px;
+}
+.dropOut:before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 15px 18px;
+        border-color: #DDDDDD transparent;
+        display: block;
+        width: 0;
+        z-index: 0;
+        top: -18px;
+        left: 70px;
+}
+.dropOut ul li {
+        float: left;
+        width: 95px;
+        padding: 2px 0px;
+        transition: background .1s ease-out;
+}
+.paging_linksperpage ul li:hover .dropOut { 
+        opacity: 1; 
+        margin-top: 8px;   
+}
+
 .tagfilter div.awesomplete {
     width: inherit;
 }
@@ -277,7 +376,6 @@ h1 {
 #searchcriteria_result i { 
 	top: 4px;
 }
-
 .am-action_plugin {
     float: left;
     margin: 0px 5px;
@@ -311,10 +409,6 @@ h1 {
     width:200px;
     text-align:center;
     margin:0 auto;
-}
-.paging_linksperpage { 
-    float:right; 
-    margin-top:0px;
 }
 .paging_current { 
     display:inline; 
@@ -426,31 +520,14 @@ width:100%
     margin: 5px auto;
     max-width: 980px;
 }
-#linklist li {
-    border-bottom: 1px solid #E0E2E2;
-    padding: 10px 0 10px;
-}
+
 .linkcontainer {
     margin-bottom:2px;
+    padding:10px 0px;
+    border-bottom: 1px solid #E0E2E2;
+    
 }
-.am-partagesocial {
-    position:relative;
-    display:inline;
-    font-size:11pt;
-    opacity:0.3;
-    float:right;
-}
-.am-partagesocial a {
-    text-decoration:none;
-    color:#4C4B4A;
-}
-.am-partagesocial:hover {
-    opacity:1;
-    transition: all 0.5s ease-in-out 0s;
-}
-.am-partagesocial a:hover {
-    color:#C93030;
-}
+
 #linklist li.private {
     background-color:rgba(247, 247, 247, 0.54);
 }
@@ -895,10 +972,12 @@ div.dailyEntryDescription  a{
 .linkeditbuttonsDaily, .linkeditbuttonsDaily input {
     opacity:0.75;
     margin-top:5px;
+    z-index: 1;
 }
 .linkeditbuttonsDaily input:hover {
     font-weight:bold;  
     opacity:1;
+    z-index: 1;
 }
 
 /* Common CSS screwdriver */
@@ -1024,7 +1103,7 @@ display:none;
     height:auto;
     width: auto!important;
     margin:10px 5px!important;
-	position:relative;
+    position:relative;
 }
 #am-searchcontainer {
     float:none;
