@@ -11,6 +11,10 @@
     <div class="am-plugin_footer">{loop="$plugins_footer.text"} {$value}{/loop}</div>
 </div>
 
+{loop="$plugins_footer.endofpage"}
+    {$value}
+{/loop}
+
 {loop="$plugins_footer.js_files"}
     <script src="{$value}#"></script>
 {/loop}
