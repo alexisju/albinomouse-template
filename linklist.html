@@ -27,7 +27,7 @@
         {if="$search_type=='tags'"}
             <div id="searchcriteria">{$result_count} results for tags
             {loop="search_crits"}
-                <span class="linktag" title="Remove tag"> <a href="?removetag={$value}">{$value} <span id="searchcriteria_result"><i class="glyphicon glyphicon-remove"></i></span></a></span>
+                <span class="linktag" title="Remove tag"> <a href="?removetag={function="urlencode($value)"}">{$value} <span id="searchcriteria_result"><i class="glyphicon glyphicon-remove"></i></span></a></span>
             {/loop}</div>
         {/if}
     {/if}
