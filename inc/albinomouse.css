@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                       */
 /*                                                                                                                                */
-/* Version : 20151212                                                                                               */
+/* Version : 20160206                                                                                               */
 
 @font-face {
     font-family: "Open Sans";
@@ -1133,6 +1133,22 @@ color: black;
     text-decoration: none;
     font-style: normal;
     color: #C93030;
+}
+
+/* Intégration plugins tiers */
+.md_help {
+    padding:5px !important;
+    color: #4C4B4A !important;
+}
+
+.md_help a {
+    float:none !important;
+    background-color:none !important;
+    color: #4C4B4A !important;
+    padding:0 !important;
+    margin:0 !important;
+    font-size:inherit !important;
+    text-decoration:none!important;
 }
 
 /* ---------------------- Responsive Albinomouse Template --------------------------------------------------*/
