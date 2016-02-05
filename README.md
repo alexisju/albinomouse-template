@@ -23,13 +23,18 @@ Vous trouverez plus d'information à ce sujet sur le [wiki du Shaarli communauta
 
 ### Conseils d'utilisation ###
 
-Depuis la version 0.6.0 le [système de plugin](https://github.com/shaarli/Shaarli/wiki/Plugin-System) est maintenant opérationel et intégré à ce template. Vous pouvez par exemple vous en servir pour créer un menu personnalisé qui vous permettra de faire la mise à jour du template plus facilement.
+Depuis la version 0.6.0, le [système de plugin](https://github.com/shaarli/Shaarli/wiki/Plugin-System) est maintenant opérationel et intégré à ce template. 
+Depuis la version 0.6.3, le [gestionnaire de plugin](https://github.com/shaarli/Shaarli/wiki/Plugin-installation-%26-configuration) est également supporté.
 
-Vous pouvez adapter le [plugin que j'utilise pour mon installation personnelle de Shaarli](https://github.com/alexisju/menu).
+En complément avec ce template, je vous conseille d'utiliser les plugins ci-dessous que j'ai développé pour s'intégrer à AlbinoMouse :
+ - [Menu](https://github.com/alexisju/menu) : créer un menu personnalisé qui vous permettra de faire la mise à jour du template plus facilement ;
+ - [Social](https://github.com/alexisju/social) : un outil discret de repartage de vos liens vers les réseaux sociaux ;
+ - [Qrcode](https://github.com/alexisju/qrcode_albinomouse) : un plugin alternatif au plugin par défaut pour afficher vos liens sous forme de QR-Codes.
+ - [Go to top](https://github.com/alexisju/gototop) : ajoute un lien, en pied de page, pour remonter en haut de la page.
 
-Les icônes du menu sont personnalisables grâce à [Glyphicon](http://getbootstrap.com/components/#glyphicons).
+Les icônes du menu sont personnalisables grâce à [Glyphicon](http://getbootstrap.com/components/#glyphicons) intégré au template.
 
-Remarque : certains éléments du menus sont volontairement masqués lorsque vous êtes connecté à Shaarli (classe CSS "cachemoi") pour laisser place à d'autres options utiles. 
+Remarque : certains éléments du menus peuvent être masqués automatiquement lorsque vous êtes connecté à Shaarli en ajoutant la classe CSS "cachemoi"
 
 ###Licences###
   - AlbinoMouse est disponible sous [licence GPLv3] (inc/albinomouse-licence.txt)
