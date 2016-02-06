@@ -1209,11 +1209,10 @@ display:none;
     cursor: pointer;
 }
 #loginform {
-    background-color: #FFFFFF;
     clear: both;
     color: #4C4B4A;
     display: block;
-    float: left;
+    float: none;
     height: 100%;
     padding: 5px;
     position: relative;
