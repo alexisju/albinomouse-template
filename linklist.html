@@ -19,18 +19,25 @@
         {include="linklist.paging"}
 
 {if="count($links)==0"}
-        <div id="searchcriteria">Nothing found.</i></div>
-    {else}
-        {if="$search_type=='fulltext'"}
-            <div id="searchcriteria">{$result_count} results for <span id="searchcriteria_result">{$search_crits}</span></div>
-        {/if}
-        {if="$search_type=='tags'"}
-            <div id="searchcriteria">{$result_count} results for tags
-            {loop="search_crits"}
-                <span class="linktag" title="Remove tag"> <a href="?removetag={function="urlencode($value)"}">{$value} <span id="searchcriteria_result"><i class="glyphicon glyphicon-remove"></i></span></a></span>
-            {/loop}</div>
-        {/if}
+        <div id="searchcriteria">Nothing found.</div>
+    {elseif="!empty($search_term) or !empty($search_tags)"}
+        <div id="searchcriteria">
+            {$result_count} results
+            {if="!empty($search_term)"}
+                for <em>{$search_term}</em>
+            {/if}
+            {if="!empty($search_tags)"}
+                {$exploded_tags=explode(' ', $search_tags)}
+                tagged
+                {loop="$exploded_tags"}
+                    <span class="linktag" title="Remove tag">
+                        <a href="?removetag={function="urlencode($value)"}">{$value} <span class="remove">x</span></a>
+                    </span>
+                {/loop}
+            {/if}
+        </div>
     {/if}
+    
     <ul>
         {loop="links"}
         <li{if="$value.class"} class="{$value.class}"{/if}>
