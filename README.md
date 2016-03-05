@@ -27,9 +27,9 @@ Depuis la version 0.6.0, le [système de plugin](https://github.com/shaarli/Shaa
 Depuis la version 0.6.3, le [gestionnaire de plugin](https://github.com/shaarli/Shaarli/wiki/Plugin-installation-%26-configuration) est également supporté.
 
 En complément avec ce template, je vous conseille d'utiliser les plugins ci-dessous que j'ai développé pour s'intégrer à AlbinoMouse :
- - [Menu](https://github.com/alexisju/menu) : créer un menu personnalisé qui vous permettra de faire la mise à jour du template plus facilement ;
+ - [AM_Menu](https://github.com/alexisju/am_menu) : ajoute un menu personalisable au template. Il vous permettra de faire la mise à jour du template plus facilement car vous ne devrez plus modifier le template lui-même pour l'adapter à vos besoins ;
  - [Social](https://github.com/alexisju/social) : un outil discret de repartage de vos liens vers les réseaux sociaux ;
- - [Qrcode](https://github.com/alexisju/qrcode_albinomouse) : un plugin alternatif au plugin par défaut pour afficher vos liens sous forme de QR-Codes.
+ - [Qrcode](https://github.com/alexisju/am_qrcode) : un plugin alternatif au plugin par défaut pour afficher vos liens sous forme de QR-Codes.
  - [Go to top](https://github.com/alexisju/gototop) : ajoute un lien, en pied de page, pour remonter en haut de la page.
 
 Les icônes du menu sont personnalisables grâce à [Glyphicon](http://getbootstrap.com/components/#glyphicons) intégré au template.
