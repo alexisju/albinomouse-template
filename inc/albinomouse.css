@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                       */
 /*                                                                                                                                */
-/* Version : 20160304                                                                                               */
+/* Version : 20160327                                                                                               */
 
 @font-face {
     font-family: "Open Sans";
@@ -45,6 +45,9 @@ input[name="import_file"] {
 }
 a {
     text-decoration: none;
+}
+b {
+    font-weight:600;
 }
 h1 {
     font-size: 20pt;
