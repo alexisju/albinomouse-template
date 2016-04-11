@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                       */
 /*                                                                                                                                */
-/* Version : 20160327                                                                                               */
+/* Version : 20160411                                                                                               */
 
 @font-face {
     font-family: "Open Sans";
@@ -245,7 +245,7 @@ em {
         padding:12px;
         opacity: 0;
         transition: all .1s ease-out;
-        z-index: 10;
+        z-index: 0;
         background: #FFFFFF;
         border: #DDDDDD solid 2px;
         border-radius: 7px;
@@ -284,7 +284,8 @@ em {
 }
 .paging_linksperpage ul li:hover .dropOut { 
         opacity: 1; 
-        margin-top: 8px;   
+        margin-top: 8px;
+        z-index:10;
 }
 
 .tagfilter div.awesomplete {
