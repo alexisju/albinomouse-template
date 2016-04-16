@@ -42,4 +42,4 @@ Remarque : certains éléments du menus peuvent être masqués automatiquement l
   - OpenSans (http://opensans.com) : [Apache Licence version 2.0] (inc/fonts/opensans-license.txt)
 
 ###Crédit###
-Le template AlbinoMouse pour Shaarli est directement inspiré du thème [AlbinoMouse pour WordPress](http://www.pixelstrol.ch/en/wp-themes/albinomouse/) développé par Stefan Brechbühl.
+Le template AlbinoMouse pour Shaarli est directement inspiré du thème [AlbinoMouse pour WordPress](https://wpzoo.ch/en/themes/albinomouse/) développé par Stefan Brechbühl.
