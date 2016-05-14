@@ -3,7 +3,14 @@
 <head>{include="includes"}
     <style TYPE="text/css">#activeLogin,#activeLogin i {background-color: #C93030!important;color:#FFFFFF!important;} #am-searchcontainer {display:none;}</style>
 </head>
-<body {if="ban_canLogin()"} onload="document.loginform.login.focus();"{/if} >
+<body
+{if="ban_canLogin()"}
+  {if="empty($username)"}
+    onload="document.loginform.login.focus();"
+  {else}
+    onload="document.loginform.password.focus();"
+  {/if}
+{/if}>
 <div id="pageheader">
 	{include="page.header"}
 <div id="am-container">
@@ -12,7 +19,7 @@
     You have been banned from login after too many failed attempts. Try later.
 {else}
     <form method="post" name="loginform">
-    <input type="text" name="login" tabindex="1" placeholder="login"> <input type="password" name="password" tabindex="2" placeholder="mot de passe"> <input type="submit" value="Login" id="loginbutton" tabindex="4"><br>
+    <input type="text" name="login" tabindex="1" placeholder="login" {if="!empty($username)"}value="{$username}"{/if}> <input type="password" name="password" tabindex="2" placeholder="mot de passe"> <input type="submit" value="Login" id="loginbutton" tabindex="4"><br>
     <div id="sessioncheck"><input type="checkbox" name="longlastingsession" id="longlastingsession"  tabindex="3"><label for="longlastingsession">&nbsp;Rester connecté</label></div>
     <input type="hidden" name="token" value="{$token}">
     {if="$returnurl"}<input type="hidden" name="returnurl" value="{$returnurl}">{/if}
