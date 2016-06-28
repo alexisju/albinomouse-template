@@ -80,13 +80,16 @@
 					icon32URL: baseURL + "/tpl/albinomouse-template/inc/img/favicon.ico",
 					icon64URL: baseURL + "/tpl/albinomouse-template/inc/img/favicon.ico",
 
-					shareURL: baseURL + "{noparse}?post=%{url}&title=%{title}&description=%{description}&source=firefoxsocialapi{/noparse}",
+					shareURL: baseURL + "{noparse}?post=%{url}&title=%{title}&description=%{text}&source=firefoxsocialapi{/noparse}",
 					homepageURL: baseURL
 				};
 				node.setAttribute("data-service", JSON.stringify(data));
-
 				var activate = new CustomEvent("ActivateSocialFeature");
 				node.dispatchEvent(activate);
+			}
+			function alertBookmarklet() {
+				alert('Drag this link to your bookmarks toolbar, or right-click it and choose Bookmark This Link...');
+				return false;
 			}
 		</script>		
 </div>
