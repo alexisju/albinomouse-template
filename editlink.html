@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>{include="includes"}
-<link type="text/css" rel="stylesheet" href="../inc/awesomplete.css" />
 </head>
 <body
 {if condition="$link.title==''"}onload="document.linkform.lf_title.focus();"
@@ -40,13 +39,6 @@ data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
 </div>
 {if="$source !== 'firefoxsocialapi'"}
  {include="page.footer"}
-{/if}
-{if="($GLOBALS['config']['OPEN_SHAARLI'] || isLoggedIn())"}
-<script src="inc/awesomplete.min.js#"></script>
-<script src="inc/awesomplete-multiple-tags.js#"></script>
-<script>
-    awesompleteUniqueTag('#lf_tags');
-</script>
 {/if}
 </body>
 </html>
