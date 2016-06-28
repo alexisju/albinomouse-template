@@ -40,5 +40,13 @@ data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" ><br>
 {if="$source !== 'firefoxsocialapi'"}
  {include="page.footer"}
 {/if}
+{if="$source == 'firefoxsocialapi'"}
+<link type="text/css" rel="stylesheet" href="inc/awesomplete.css" />
+<script src="inc/awesomplete.min.js#"></script>
+<script src="inc/awesomplete-multiple-tags.js#"></script>
+<script>
+    awesompleteUniqueTag('#lf_tags');
+</script>
+{/if}
 </body>
 </html>
