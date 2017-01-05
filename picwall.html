@@ -13,7 +13,9 @@
 </div>
 <div id="am-container">
 	<div id="plugin_zone_start_picwall" class="plugin_zone">
-		 {loop="$plugin_start_zone"} {$value} {/loop}
+	 {loop="$plugin_start_zone"} 
+		{$value} 
+	{/loop}
 	</div>
 	<div id="linklist">
 		<div class="paging">
@@ -44,11 +46,15 @@
 <div class="clear">
 </div>
 <div id="plugin_zone_end_picwall" class="plugin_zone">
-	 {loop="$plugin_end_zone"} {$value} {/loop}
+	{loop="$plugin_end_zone"}
+		{$value}
+	{/loop}
 </div>
  {include="page.footer"}
 <script>
-var bLazy = new Blazy();
+window.onload = function() {
+  var bLazy = new Blazy();
+}
 </script>
 </body>
 </html>

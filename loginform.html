@@ -4,7 +4,7 @@
     <style TYPE="text/css">#activeLogin,#activeLogin i {background-color: #C93030!important;color:#FFFFFF!important;} #am-searchcontainer {display:none;}</style>
 </head>
 <body
-{if="ban_canLogin()"}
+{if="ban_canLogin($conf)"}
   {if="empty($username)"}
     onload="document.loginform.login.focus();"
   {else}
@@ -15,7 +15,7 @@
 	{include="page.header"}
 <div id="am-container">
 	<div id="loginform">
-{if="!ban_canLogin()"}
+{if="!ban_canLogin($conf)"}
     You have been banned from login after too many failed attempts. Try later.
 {else}
     <form method="post" name="loginform">

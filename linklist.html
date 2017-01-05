@@ -20,28 +20,27 @@
 
         {include="linklist.paging"}
 
-        {if="count($links)==0"}
-            <div id="searchcriteria">Nothing found.</div>
-        {elseif="!empty($search_term) or !empty($search_tags)"}
-            <div id="searchcriteria">
-                {$result_count} results
-                {if="!empty($search_term)"}
-                    for <em>{$search_term}</em>
-                {/if}
-                {if="!empty($search_tags)"}
-                    {$exploded_tags=explode(' ', $search_tags)}
-                    tagged
-                    {loop="$exploded_tags"}
-                        <span class="linktag" title="Remove tag">
-                            <a href="?removetag={function="urlencode($value)"}">{$value} <span class="remove">x</span></a>
-                        </span>
-                    {/loop}
-                {/if}
-            </div>
-        {/if}
-
+    {if="count($links)==0"}
+        <div id="searchcriteria">Nothing found.</div>
+    {elseif="!empty($search_term) or !empty($search_tags)"}
+        <div id="searchcriteria">
+            {$result_count} results
+            {if="!empty($search_term)"}
+                for <em>{$search_term}</em>
+            {/if}
+            {if="!empty($search_tags)"}
+                {$exploded_tags=explode(' ', $search_tags)}
+                tagged
+                {loop="$exploded_tags"}
+                    <span class="linktag" title="Remove tag">
+                        <a href="?removetag={function="urlencode($value)"}">{$value} <span class="remove">x</span></a>
+                    </span>
+                {/loop}
+            {/if}
+        </div>
+    {/if}
         <ul>
-            {loop="links"}
+            {loop="$links"}
             <li{if="$value.class"} class="{$value.class}"{/if}>
                 <a id="{$value.shorturl}"></a>
                 <div class="thumbnail">{$value.url|thumbnail}</div>
@@ -52,7 +51,7 @@
                                 <input type="hidden" name="edit_link" value="{$value.id}">
                                 <input type="image" alt="Edit" src="inc/img/edit_icon.png" title="Edit" class="button_edit">
                             </form><br>
-                            <form method="POST" class="buttoneditform">
+                            <form method="GET" class="buttoneditform">
                                 <input type="hidden" name="lf_linkdate" value="{$value.id}">
                                 <input type="hidden" name="token" value="{$token}">
                                 <input type="hidden" name="delete_link">
@@ -70,13 +69,16 @@
                         {loop="value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i> <a href="?addtag={$value|urlencode}">{$value}</a> </span> {/loop}
                         </div>
                     {/if}
-                    <div class="linkdescription">{if="$value.description"}{$value.description}{/if}</div>
-                    {if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}
-                        {if="isLoggedIn()"}
-                            <span class="linkdate" title="Permalink">
+                    <div class="linkdescription">
+		{if="$value.description"}{$value.description}{/if}</div>
+                {if="!$hide_timestamps || isLoggedIn()"}
+			{$updated=$value.updated_timestamp ? 'Edited: '. strftime('%c', $value.updated_timestamp) : 'Permalink'}
+                         <span class="linkdate" title="Permalink">
                                 <i class="glyphicon glyphicon-time"></i>
                                 <a href="?{$value.shorturl}">
-                                    {function="strftime('%A %d %B %Y à %k:%m', $value.timestamp)"}
+				<span title="{$updated}">
+                                {function="strftime('%A %d %B %Y à %k:%m', $value.timestamp)"}
+                                {if="$value.updated_timestamp"}*{/if}
                                 </a> -
                             </span>
                         {else}

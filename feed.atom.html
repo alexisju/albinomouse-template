@@ -6,18 +6,18 @@
     <updated>{$last_update}</updated>
   {/if}
   <link rel="self" href="{$self_link}#" />
-  {if="!empty($pubsubhub_url)"}
-    <!-- PubSubHubbub Discovery -->
-    <link rel="hub" href="{$pubsubhub_url}#" />
-    <!-- End Of PubSubHubbub Discovery -->
-  {/if}
+  <link rel="search" type="application/opensearchdescription+xml" href="{$index_url}?do=opensearch#"
+             title="Shaarli search - {$shaarlititle}" />
+  {loop="$feed_plugins_header"}
+    {$value}
+  {/loop}
   <author>
     <name>{$index_url}</name>
     <uri>{$index_url}</uri>
   </author>
   <id>{$index_url}</id>
   <generator>Shaarli</generator>
-  {loop="links"}
+  {loop="$links"}
     <entry>
       <title>{$value.title}</title>
       {if="$usepermalinks"}
@@ -27,13 +27,15 @@
       {/if}
       <id>{$value.guid}</id>
       {if="$show_dates"}
-        <updated>{$value.iso_date}</updated>
+        <published>{$value.pub_iso_date}</published>
+        <updated>{$value.up_iso_date}</updated>
       {/if}
-      <content type="html" xml:lang="{$language}">
-        <![CDATA[{$value.description}]]>
-      </content>
+      <content type="html" xml:lang="{$language}"><![CDATA[{$value.description}]]></content>
       {loop="$value.taglist"}
         <category scheme="{$index_url}?searchtags=" term="{$value|strtolower}" label="{$value}" />
+      {/loop}
+      {loop="$value.feed_plugins"}
+        {$value}
       {/loop}
     </entry>
   {/loop}

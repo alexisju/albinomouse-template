@@ -12,8 +12,11 @@
 </div>
 <div id="am-container">
 	<div id="plugin_zone_start_tagcloud" class="plugin_zone">
-		 {loop="$plugin_start_zone"} {$value} {/loop}
+		{loop="$plugin_start_zone"}
+			{$value}
+		{/loop}
 	</div>
+
 	<div id="linklist">
 		<div class="paging">
 			<div class="am-paging">
@@ -33,13 +36,17 @@
 		</div>
 	</div>
 	<div id="cloudtag">
-		 {loop="tags"} <span class="count">{$value.count}</span><a href="?searchtags={$key|urlencode}" 
+		{loop="tags"} 
+			<span class="count">{$value.count}</span><a href="?searchtags={$key|urlencode}" 
 style="font-size:{$value.size}em;">{$key}</a>
 		{/loop}
 	</div>
 	<div id="plugin_zone_end_tagcloud" class="plugin_zone">
-		 {loop="$plugin_end_zone"} {$value} {/loop}
+		 {loop="$plugin_end_zone"}
+			{$value}
+		{/loop}
 	</div>
+
 </div>
  {include="page.footer"}
 </body>
