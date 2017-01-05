@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse pour Shaarli par Alexis J (http://liens.effingo.be)   */
 /* Sources : https://github.com/alexisju/albinomouse-template                       */
 /*                                                                                                                                */
-/* Version : 20160411                                                                                               */
+/* Version : 20160518                                                                                               */
 
 @font-face {
     font-family: "Open Sans";
@@ -219,17 +219,17 @@ em {
     width:85px;
 }
 
-.dropdown-menu ul li {
+.am-dropdown-menu ul li {
         cursor: pointer;
         transition: padding .05s linear;
 }
-.dropdown-menu ul > li {
+.am-dropdown-menu ul > li {
         display: inline-block;
 }
-.dropdown-menu ul li a:hover {
+.am-dropdown-menu ul li a:hover {
         color: #C93030;
 }
-.dropdownContain {
+.am-dropdownContain {
         position: asolute;
         z-index: 2;
         left: 70%;
@@ -237,7 +237,7 @@ em {
         top: -360px;
         margin-top:15px;
 }
-.dropOut {
+.am-dropOut {
         width: 95px;
         float: left;
         position: absolute;
@@ -252,7 +252,7 @@ em {
         -webkit-border-radius: 7px;
         -moz-border-radius: 7px;
 }
-.dropOut:after {
+.am-dropOut:after {
         content: '';
         position: absolute;
         border-style: solid;
@@ -264,7 +264,7 @@ em {
         top: -16px;
         left: 72px;
 }
-.dropOut:before {
+.am-dropOut:before {
         content: '';
         position: absolute;
         border-style: solid;
@@ -276,13 +276,13 @@ em {
         top: -18px;
         left: 70px;
 }
-.dropOut ul li {
+.am-dropOut ul li {
         float: left;
         width: 95px;
         padding: 2px 0px;
         transition: background .1s ease-out;
 }
-.paging_linksperpage ul li:hover .dropOut { 
+.paging_linksperpage ul li:hover .am-dropOut { 
         opacity: 1; 
         margin-top: 8px;
         z-index:10;
