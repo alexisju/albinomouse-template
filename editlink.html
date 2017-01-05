@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>{include="includes"}
-    <link type="text/css" rel="stylesheet" href="inc/awesomplete.css" />
 </head>
 <body
 {if="$link.title==''"}onload="document.linkform.lf_title.focus();"
 {elseif="$link.description==''"}onload="document.linkform.lf_description.focus();"
 {else}onload="document.linkform.lf_tags.focus();"{/if} >
 <div id="pageheader">
-    {if="$source !== 'firefoxsocialapi'"}
-    {include="page.header"}
-    {else}
-    <div id="shaarli_title"><a href="{$titleLink}">{$shaarlititle}</a></div>
-    {/if}
     <div id="editlinkform">
         <form method="post" name="linkform">
             <input type="hidden" name="lf_linkdate" value="{$link.linkdate}">
@@ -46,12 +40,16 @@
     </div>
 </div>
 {if="$source !== 'firefoxsocialapi'"}
-{include="page.footer"}
+    {include="page.footer"}
 {/if}
+</script>
+{if="$source == 'firefoxsocialapi'"}
+<link type="text/css" rel="stylesheet" href="inc/awesomplete.css" />
 <script src="inc/awesomplete.min.js#"></script>
 <script src="inc/awesomplete-multiple-tags.js#"></script>
 <script>
     awesompleteUniqueTag('#lf_tags');
 </script>
+{/if}
 </body>
 </html>

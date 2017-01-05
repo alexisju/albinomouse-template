@@ -5,7 +5,7 @@
 <style type="text/css">
 #activeLinklist,#activeLinklist i,#activePicwall,#activePicwall i {background-color: #C93030!important;color:#FFFFFF!important;}
 </style>
-<script src="inc/js/blazy-1.3.1.min.js"></script>
+<script src="inc/js/blazy-1.3.1.min.js#"></script>
 </head>
 <body>
 <div id="pageheader">
@@ -29,16 +29,19 @@
 				</div>
 				 {/if}
 				<div class="paging_rss">
-					<a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="rss feed"><img class="glyphicon" alt="rss" src="inc/img/feed-icon-fa.png" title="rss feed"></a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="atom feed"><img class="glyphicon" alt="atom" src="inc/img/feed-icon-fa.png" title="atom feed"></a> {/if}
+					<a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="rss feed"><img class="glyphicon" alt="rss" src="inc/img/feed-icon-fa.png" title="rss feed"></a>{if="$showatom"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="atom feed"><img class="glyphicon" alt="atom" src="inc/img/feed-icon-fa.png" title="atom feed"></a> {/if}
 				</div>
 			</div>
 			<br>
 		</div>
 	</div>
 	<div id="picwall_container">
-		 {loop="linksToDisplay"}
+		 {loop="$linksToDisplay"}
 		<div class="picwall_pictureframe">
 			 {$value.thumbnail}<a href="?{$value.real_url}"><span class="info">{$value.title}</span></a>
+                {loop="$value.picwall_plugin"}
+                    {$value}
+                {/loop}
 		</div>
 		 {/loop}
 	</div>
@@ -46,11 +49,13 @@
 <div class="clear">
 </div>
 <div id="plugin_zone_end_picwall" class="plugin_zone">
-	{loop="$plugin_end_zone"}
-		{$value}
-	{/loop}
+    {loop="$plugin_end_zone"}
+        {$value}
+    {/loop}
 </div>
- {include="page.footer"}
+
+{include="page.footer"}
+
 <script>
 window.onload = function() {
   var bLazy = new Blazy();

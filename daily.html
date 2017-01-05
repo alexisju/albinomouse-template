@@ -37,10 +37,10 @@
     <div class="clear"></div>
     
         {if="$linksToDisplay"}
-        {loop="cols"}
+        {loop="$cols"}
             {if="isset($value[0])"}
             <div id="daily_col{$counter+1}">
-                {loop="value"}
+                {loop="$value"}
                     {$link=$value}
                     <div class="dailyEntry">
                         <div class="dailyEntryTitle">
@@ -48,25 +48,26 @@
                         </div>                                                      
                         <div class="dailyEntryPermalink">
                         </div>
-                        {if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}
+                        {if="!$hide_timestamps || isLoggedIn()"}
                             <div class="dailyEntryLinkdate">
 			{if="isLoggedIn()"}	
-			 <i class="glyphicon glyphicon-time"></i> <a href="?{$link.linkdate|smallHash}">{function="strftime('%A %d %B %Y à %k:%M', $link.timestamp)"}</a>
+			 <i class="glyphicon glyphicon-time"></i> <a href="?{$value.shorturl}">{function="strftime('%A %d %B %Y à %k:%M', $link.timestamp)"}</a>
 			{else}
-			<i class="glyphicon glyphicon-time"></i> <a href="?{$link.linkdate|smallHash}">{function="strftime('%A %d %B %Y', $link.timestamp)"}</a>
+			<i class="glyphicon glyphicon-time"></i> <a href="?{$value.shorturl}">{function="strftime('%A %d %B %Y', $link.timestamp)"}</a>
 			{/if}
                         </div>
                         {/if}
                         {if="$link.tags"}
                             <div class="dailyEntryTags">
-                                {loop="value.taglist"}<span class="linktag" title="Search tag"><i class="glyphicon glyphicon-tag"></i> <a href="?searchtags={$value|urlencode}">{$value}</a> </span> 
+                                {loop="$link.taglist"}<span class="linktag" title="Search tag"><i class="glyphicon glyphicon-tag"></i> <a href="?searchtags={$value|urlencode}">{$value}</a> </span> 
                                 {/loop}
                             </div>
                         {/if}
                         {if="$link.thumbnail"}
                             <div class="dailyEntryThumbnail">{$link.thumbnail}</div>
                         {/if}
-                        {if="$value.description"}<div class="dailyEntryDescription">{$link.formatedDescription}</div>{/if}
+                        <div class="dailyEntryDescription">{$link.formatedDescription}</div>
+
                         <div class="dailyEntryFooter">
                         {loop="$link.link_plugin"}
                         {$value}

@@ -25,13 +25,18 @@
 {else}
 <div id="am-menu">
     {loop="$plugins_header.buttons_toolbar"}
-        {$value}
+        <li><a
+            {loop="$value.attr"}
+                {$key}="{$value}"
+            {/loop}>
+            {$value.html}
+        </a></li>
     {/loop}
   {if="isLoggedIn()"}
     <style type="text/css">.am-hide {display:none;}</style>
     <a id="activeAddlink" href="?do=addlink"><i class="glyphicon glyphicon-plus-sign"></i>  nouveau lien</a>
     <a href="?do=logout"><i class="glyphicon glyphicon-log-out"></i> logout</a>
-    {elseif="$GLOBALS['config']['OPEN_SHAARLI']"}
+    {elseif="$openshaarli"}
     <a id="activeOptions" href="?do=tools">options</a><a href="?do=addlink"><i class="glyphicon glyphicon-plus-sign"></i> nouveau lien</a>
   {else}
     <a id="activeLogin" href="?do=login"><i class="glyphicon glyphicon-log-in"></i> login</a>

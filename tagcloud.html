@@ -29,7 +29,7 @@
 				</div>
 				 {/if}
 				<div class="paging_rss">
-					<a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="rss feed"><img class="glyphicon" alt="rss" src="inc/img/feed-icon-fa.png" title="rss feed"></a>{if="$GLOBALS['config']['SHOW_ATOM']"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="atom feed"><img class="glyphicon" alt="atom" src="inc/img/feed-icon-fa.png" title="atom feed"></a> {/if}
+					<a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="rss feed"><img class="glyphicon" alt="rss" src="inc/img/feed-icon-fa.png" title="rss feed"></a>{if="$showatom"}  | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="atom feed"><img class="glyphicon" alt="atom" src="inc/img/feed-icon-fa.png" title="atom feed"></a> {/if}
 				</div>
 			</div>
 			<br>

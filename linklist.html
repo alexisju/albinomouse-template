@@ -2,6 +2,7 @@
 <html>
 <head>{include="includes"}
     <style TYPE="text/css">#activeLinklist,#activeLinklist i {background-color: #C93030!important;color:#FFFFFF!important;}</style>
+        <link type="text/css" rel="stylesheet" href="inc/awesomplete.css" />
 </head>
 
 <body>
@@ -10,15 +11,21 @@
         {include="page.header"}
     </div>
 
-    <div id="linklist">
+<div id="linklist">
 
-        <div id="plugin_zone_start_linklist" class="plugin_zone">
-            {loop="$plugin_start_zone"}
-                {$value}
-            {/loop}
-        </div>
+    <div id="plugin_zone_start_linklist" class="plugin_zone">
+        {loop="$plugin_start_zone"}
+            {$value}
+        {/loop}
+    </div>
 
-        {include="linklist.paging"}
+    {include="linklist.paging"}
+
+ <div id="plugin_zone_start_linklist" class="plugin_zone">
+        {loop="$plugin_start_zone"}
+            {$value}
+        {/loop}
+    </div>
 
     {if="count($links)==0"}
         <div id="searchcriteria">Nothing found.</div>
@@ -60,43 +67,47 @@
                             </form>
                         </div>
                     {/if}
-                    <span class="linktitle">
-                        <a href="{$value.real_url}">{$value.title}</a>
-                    </span><br>
-                    <span class="linkurl" title="Direct link"><i class="glyphicon glyphicon-link"></i> <a href="{$value.url}">{$value.url}</a></span>
-                    {if="$value.tags"}
-                        <div class="linktaglist">
-                        {loop="value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i> <a href="?addtag={$value|urlencode}">{$value}</a> </span> {/loop}
-                        </div>
-                    {/if}
-                    <div class="linkdescription">
-		{if="$value.description"}{$value.description}{/if}</div>
+                <span class="linktitle">
+                    <a href="{$value.real_url}">{$value.title}</a>
+                </span>
+                <br>
+                <i class="glyphicon glyphicon-link"></i> <a href="{$value.real_url}"><span class="linkurl" title="Short link">{$value.url}</span></a>
+                <br>
+                {if="$value.tags"}
+                    <div class="linktaglist">
+                    {loop="$value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i>  <a href="?addtag={$value|urlencode}">{$value}</a></span> {/loop}
+                    </div>
+                {/if}
+                {if="$value.description"}<div class="linkdescription">{$value.description}</div>{/if}
                 {if="!$hide_timestamps || isLoggedIn()"}
-			{$updated=$value.updated_timestamp ? 'Edited: '. strftime('%c', $value.updated_timestamp) : 'Permalink'}
-                         <span class="linkdate" title="Permalink">
-                                <i class="glyphicon glyphicon-time"></i>
-                                <a href="?{$value.shorturl}">
-				<span title="{$updated}">
-                                {function="strftime('%A %d %B %Y à %k:%m', $value.timestamp)"}
+                    {$updated=$value.updated_timestamp ? 'Edited: '. strftime('%A %d %B %Y', $value.updated_timestamp) : 'Permalink'}
+                    <i class="glyphicon glyphicon-time"></i>
+                    <span class="linkdate" title="Permalink">
+                        <a href="?{$value.shorturl}">
+                            <span title="{$updated}">
+                                {function="strftime('%A %d %B %Y', $value.timestamp)"}
                                 {if="$value.updated_timestamp"}*{/if}
-                                </a> -
                             </span>
-                        {else}
-                            <span class="linkdate" title="Permalink">
-                                <i class="glyphicon glyphicon-time"></i>
-                                <a href="?{$value.shorturl}">
-                                    {function="strftime('%A %d %B %Y', $value.timestamp)"}
-                                </a> -
-                            </span>
-                        {/if}
-                        <span class="am-link_plugin">{loop="$value.link_plugin"}<span>{$value}</span>{/loop}</span><div class="clear"></div>
-                    {else}
-                        <span class="linkdate" title="Short link here"><i class="glyphicon glyphicon-time"></i> <a href="?{$value.shorturl}"></a> - </span>
-                    {/if}
-                </div>
-            </li>
-            {/loop}
-        </ul>
+                        </a> -
+                    </span>
+                    <span class="am-link_plugin">
+                        {loop="$value.link_plugin"}<span>{$value}</span>{/loop}
+                    </span>
+                    <div class="clear"></div>
+                {else}
+                    <span class="linkdate" title="Short link here"><i class="glyphicon glyphicon-link"></i> <a href="?{$value.shorturl}">permalink</a> - </span>
+                {/if}
+
+            </div>
+        </li>
+    {/loop}
+    </ul>
+
+    <div id="plugin_zone_end_linklist" class="plugin_zone">
+        {loop="$plugin_end_zone"}
+            {$value}
+        {/loop}
+    </div>
 
         {include="linklist.paging"}
 
