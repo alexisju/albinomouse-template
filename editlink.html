@@ -33,7 +33,13 @@
             {/if}
             <input type="submit" value="Save" name="save_edit" class="bigbutton">
             <input type="submit" value="Cancel" name="cancel_edit" class="bigbutton">
-            {if="!$link_is_new"}<input type="submit" value="Delete" name="delete_link" class="bigbutton delete" onClick="return confirmDeleteLink();">{/if}
+            {if="!$link_is_new"}
+              <a href="?delete_link&amp;lf_linkdate={$value.id}&amp;token={$token}"
+                 title="" name="delete_link" class="bigbutton"
+                 onClick="return confirmDeleteLink();">
+                {'Delete'|t}
+              </a>
+            {/if}
             <input type="hidden" name="token" value="{$token}">
             {if="$http_referer"}<input type="hidden" name="returnurl" value="{$http_referer}">{/if}
         </form>
@@ -44,7 +50,7 @@
 {/if}
 </script>
 {if="$source == 'firefoxsocialapi'"}
-<link type="text/css" rel="stylesheet" href="inc/awesomplete.css" />
+<link type="text/css" rel="stylesheet" href="inc/awesomplete.css#" />
 <script src="inc/awesomplete.min.js#"></script>
 <script src="inc/awesomplete-multiple-tags.js#"></script>
 <script>
