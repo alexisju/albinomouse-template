@@ -1,14 +1,14 @@
 #AlbinoMouse pour Shaarli#
 
-AlbinoMouse est un template pour le [fork communautaire de Shaarli](https://github.com/shaarli/Shaarli) développé par [alexis j](https://liens.effingo.be).
+AlbinoMouse est un template pour [ Shaarli](https://github.com/shaarli/Shaarli) développé par [alexis j](http://liens.effingo.be).
 
-Live demo (frontend uniquement) : http://liens.effingo.be
+Live demo (frontend) : http://liens.effingo.be
 
 Dépôt GitHub : https://github.com/alexisju/albinomouse-template/
 
-Capture d'écran du tempalte avec les plugins [am_menu](https://github.com/alexisju/am_menu) et [social](https://github.com/alexisju/social)  activés :
+Capture d'écran du template avec les plugins [am_menu](https://github.com/alexisju/am_menu) et [social](https://github.com/alexisju/social)  activés :
 
-![screenshot](https://raw.githubusercontent.com/alexisju/albinomouse-template/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/alexisju/albinomouse-template/master/inc/screenshot.png)
 
 
 ### Installation ###
