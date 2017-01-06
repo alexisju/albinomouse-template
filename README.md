@@ -2,9 +2,13 @@
 
 AlbinoMouse est un template pour le [fork communautaire de Shaarli](https://github.com/shaarli/Shaarli) développé par [alexis j](https://liens.effingo.be).
 
-Démo (frontend) : https://liens.effingo.be
+Live demo (frontend uniquement) : http://liens.effingo.be
 
 Dépôt GitHub : https://github.com/alexisju/albinomouse-template/
+
+Capture d'écran du tempalte avec les plugins [am_menu](https://github.com/alexisju/am_menu) et [social](https://github.com/alexisju/social)  activés :
+
+![screenshot](https://raw.githubusercontent.com/alexisju/albinomouse-template/master/screenshot.png)
 
 
 ### Installation ###
@@ -25,7 +29,7 @@ Dans votre instance de Shaarli, modifiez ensuite le fichier de configuration `da
 }
 ```
 
-A partir de la version de 0.8.2 de Shaarli, après avoir téléchargé le template dans le répertoire adhoc, vous pouvez activer le tempalte directement depuis l'interface de configuration de Shaarli.
+A partir de la version de 0.8.2 de Shaarli, après avoir téléchargé le template dans le répertoire adhoc, vous pouvez activer le template directement depuis l'interface de configuration de Shaarli.
 
 Vous trouverez plus d'information à ce sujet sur le [wiki du Shaarli communautaire] (https://github.com/shaarli/Shaarli/wiki/Theming)
 
