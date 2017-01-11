@@ -2,7 +2,7 @@
 <html>
 <head>{include="includes"}
     <style TYPE="text/css">#activeLinklist,#activeLinklist i {background-color: #C93030!important;color:#FFFFFF!important;}</style>
-        <link type="text/css" rel="stylesheet" href="inc/awesomplete.css" />
+        <link type="text/css" rel="stylesheet" href="inc/awesomplete.css#" />
 </head>
 
 <body>
@@ -22,12 +22,6 @@
     {include="linklist.paging"}
     
 <div class="clear"></div>
-
- <div id="plugin_zone_start_linklist" class="plugin_zone">
-        {loop="$plugin_start_zone"}
-            {$value}
-        {/loop}
-    </div>
 
     {if="count($links)==0"}
         <div id="searchcriteria">Nothing found.</div>
@@ -105,21 +99,15 @@
     {/loop}
     </ul>
 
+    {include="linklist.paging"}
+
     <div id="plugin_zone_end_linklist" class="plugin_zone">
         {loop="$plugin_end_zone"}
             {$value}
         {/loop}
     </div>
 
-        {include="linklist.paging"}
-
-        <div id="plugin_zone_end_linklist" class="plugin_zone">
-            {loop="$plugin_end_zone"}
-                {$value}
-            {/loop}
-        </div>
-
-    </div>
+</div>
 
 {include="page.footer"}
 

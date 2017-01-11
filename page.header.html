@@ -41,6 +41,31 @@
     <li><a id="activeLogin" href="?do=login"><i class="glyphicon glyphicon-log-in"></i> login</a></li>
   {/if}
 </div>
+<div class="clear"></div>
+<div id="am-plugins_fields_toolbar">
+ {loop="$plugins_header.fields_toolbar"}
+          <form
+              {loop="$value.attr"}
+                  {$key}="{$value}"
+              {/loop}>
+              {loop="$value.inputs"}
+                  <input
+                  {loop="$value"}
+                      {$key}="{$value}"
+                  {/loop}>
+              {/loop}
+          </form>
+    {/loop}
+</div>
 {/if}
+<div id="am-plugins_errors">
+{if="!empty($plugin_errors) && isLoggedIn()"}
+    <ul class="errors">
+        {loop="$plugin_errors"}
+            <li>{$value}</li>
+        {/loop}
+    </ul>
+{/if}
+</div>
 </div>
 <div class="clear"></div>

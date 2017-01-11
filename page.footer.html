@@ -6,14 +6,17 @@
 
 <div id="footer">
     <b><a href="https://github.com/shaarli/Shaarli">Shaarli {if="isLoggedIn()"}(version {$version}){/if}</a></b> - The personal, minimalist, super-fast, database free bookmarking service<br>
-	<a href="https://github.com/shaarli/Shaarli">by the Shaarli community</a> | <a href="doc/Home.html"rel="nofollow">Help / documentation</a><br>
+	<a href="https://github.com/shaarli/Shaarli">by the Shaarli community</a> | <a href="doc/Home.html" rel="nofollow">Help / documentation</a><br>
     <a href="https://github.com/alexisju/albinomouse-template" target="_blank">AlbinoMouse Template</a> by <a href="https://effingo.be/" target="_blank">alexisju</a> <br/>
-    <div class="am-plugin_footer">{loop="$plugins_footer.text"} {$value}{/loop}</div>
+    <div class="am-plugin_footer">
+        {loop="$plugins_footer.text"} 
+            {$value}
+        {/loop}
+        {loop="$plugins_footer.endofpage"}
+            {$value}
+        {/loop}
+    </div>
 </div>
-
-{loop="$plugins_footer.endofpage"}
-    {$value}
-{/loop}
 
 {if="$newVersion"}
 <div id="newversion">
@@ -31,5 +34,5 @@
 {/if}
 
 {loop="$plugins_footer.js_files"}
-	<script src="{$value}#"></script>
+    <script src="{$value}#"></script>
 {/loop}
