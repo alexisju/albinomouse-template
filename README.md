@@ -12,7 +12,7 @@ Screenshot  with "[am_menu](https://github.com/alexisju/am_menu)" and "[social](
 
 ### Installation ###
 
-To download this theme, visit [this page](https://github.com/alexisju/albinomouse-template/archive/master.zip) and choose the most recent version matching the version of your Shaarli installation. Both use the same notation.
+To download this theme, visit [this page](https://github.com/alexisju/albinomouse-template/releases) and choose the most recent version matching the version of your Shaarli installation. Both use the same notation.
 
 Put the `albinomouse-template` folder into the `tpl` directory of your Shaarli installation.
 
@@ -35,7 +35,8 @@ Follow this link to know more about [Shaarli templates] (https://github.com/shaa
 
 ### Plugins ###
 
-I highly recomend you to use this template at least with [AM_Menu](https://github.com/alexisju/am_menu).
+I highly recommend you to use this template at least with "[AM_Menu](https://github.com/alexisju/am_menu)" plugin. 
+AM Menu (AlbinoMouse menu) add you a default menu that you can also adapt to fit to your needs.
 
 You can also use this follwing plugin developped for AlbinoMouse template : 
 
@@ -45,7 +46,7 @@ You can also use this follwing plugin developped for AlbinoMouse template :
 
 ### Licences ###
 
-  - AlbinoMouse :  [licence GPLv3] (inc/albinomouse-licence.txt)
+  - AlbinoMouse template :  [licence GPLv3] (inc/albinomouse-licence.txt)
   - Glyphicons Halflings (http://getbootstrap.com) : [MIT Licence] (inc/fonts/glyphicon-licence.txt)
   - OpenSans (http://opensans.com) : [Apache Licence version 2.0] (inc/fonts/opensans-license.txt)
 
