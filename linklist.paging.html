@@ -1,57 +1,51 @@
 <div class="paging">
 
-<div class="am-paging nomobile">
-<a href="?" title="Linklist">liste</a> {if="isLoggedIn()"}<a href="?privateonly">{if="$privateonly"}(tous les liens){else}(liens privés){/if}</a>{/if} | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a> <div class="am-action_plugin">
-{loop="$action_plugin"} 
-      <div class="paging_privatelinks">
-        <a
-          {loop="$value.attr"}
-            {$key}="{$value}"
-          {/loop}>
-          {$value.html}
-        </a>
-      </div>
-{/loop}
-</div>
-</div>
+<div class="am-PagingFlex">
 
-<div class="menu-droit">
+    <div class="am-PagingFlex-item am-PagingFlex-item1">
+        <a href="?" title="Linklist">linklist</a> {if="isLoggedIn()"}<a href="?privateonly">{if="$privateonly"}(all links){else}(private links){/if}</a>{/if} | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tagcloud</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">picwall</a> 
+        <span class="am-action_plugin">
+        {loop="$action_plugin"} 
+            <div class="paging_privatelinks">
+                <a
+                    {loop="$value.attr"}
+                    {$key}="{$value}"
+                    {/loop}>
+                {$value.html}
+                </a>
+                </div>
+        {/loop}
+        </span>
+    </div>
 
-<div class="paging_linksperpage">
-    <ul class="am-dropdown-menu">
-	<li>
-		<a href="#"><i class="glyphicon glyphicon-filter"></i></a>
-		<div class="am-dropdownContain">
-		<div class="am-dropOut">
-			<ul class="am-dropdown-menu">
-                               <li><a href="?linksperpage=20">20 liens</a></li>
-                               <li><a href="?linksperpage=50">50 liens</a></li>
-                                <li><a href="?linksperpage=100">100 liens</a></li>
-                                <li><form class="linksperpage" method="GET" style="display:inline;"><input name="linksperpage" type="text"  autocomplete="on" placeholder="valeur libre"></form></li>
-			</ul>
-			</div>
-		</div>
-	</li>
+    <div class="am-PagingFlex-item am-PagingFlex-item2">
+        {if="$previous_page_url"} <a href="{$previous_page_url}" class="paging_older">&nbsp;<i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;</a> {/if}
+        <div class="paging_current">page {$page_current} / {$page_max} </div>
+        {if="$next_page_url"} <a href="{$next_page_url}" class="paging_newer">&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp;</a> {/if}
+    </div>
+
+    <div class="am-PagingFlex-item am-PagingFlex-item3">
+    <ul class="am-PagingRightMenu">
+    <li>
+        <a href="{$feedurl}?do=rss{$searchcrits}" title="rss feed"><img class="glyphicon" alt="rss" src="inc/img/feed-icon-fa.png" title="rss feed"></a>{if="$showatom"} | <a href="{$feedurl}?do=atom{$searchcrits}" title="atom feed"><img class="glyphicon"  alt="atom" src="inc/img/feed-icon-fa.png" title="atom feed"></a>{/if}
+    </li>
+    <li>
+        <button><i class="glyphicon glyphicon-filter"></i></button>
+        <ul class="am-PagingSubmenu">
+            <li><a href="?linksperpage=20">20 links</a></li>
+            <li><a href="?linksperpage=50">50 links</a></li>
+            <li><a href="?linksperpage=100">100 links</a></li>
+            <li><form class="linksperpage" method="GET" style="display:inline;"><input name="linksperpage" type="text"  autocomplete="on" placeholder="more ?"></form></li>
+        </ul>
+    </li>
+    <li>
+         {if="isLoggedIn()"}
+            <a id="activeOptions" href="?do=tools"><i class="glyphicon glyphicon-cog"></i></a>
+        {/if}
+    </li>
     </ul>
-</div>
-
- {if="isLoggedIn()"}
-<div class="paging_options">
-    <a id="activeOptions" href="?do=tools"><i class="glyphicon glyphicon-cog"></i></a>
-</div>
-{/if}
-  
-<div class="paging_rss">
-        <a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile" title="rss feed"><img class="glyphicon" alt="rss" src="inc/img/feed-icon-fa.png" title="rss feed"></a>{if="$showatom"} | <a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile" title="atom feed"><img class="glyphicon"  alt="atom" src="inc/img/feed-icon-fa.png" title="atom feed"></a> {/if} 
-</div>
-
-</div>
-
-
-<div class="am-pages">
-    {if="$previous_page_url"} <a href="{$previous_page_url}" class="paging_older">&nbsp;<i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;</a> {/if}
-    <div class="paging_current">page {$page_current} / {$page_max} </div>
-    {if="$next_page_url"} <a href="{$next_page_url}" class="paging_newer">&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp;</a> {/if}
+    
+    </div>
 </div>
 
 </div>

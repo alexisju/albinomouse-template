@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>{include="includes"}
-	<style type="text/css">#activeLinklist,#activeLinklist i {background-color: #C93030!important;color:#FFFFFF!important;}</style>
+    <style type="text/css">#am-menu-daily,#am-menu-daily i  {background-color: #C93030!important;color:#FFFFFF!important;}</style>
 </head>
 <body>
 <div id="pageheader">
@@ -15,23 +15,27 @@
         {/loop}
     </div>
 
-    <div class="dailyDate"><span class="nomobile">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span><a href="?do=daily">{function="strftime('%A %d %B %Y', $day)"}</a> <span class="nomobile">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span></div>
+    <div class="dailyDate">
+        <a href="?do=daily">{function="strftime('%A %d %B %Y', $day)"}</a>
+    </div>
     
-<div id="dailyPaging">
-         <div class="am-paging"><a href="?" title="Linklist">liste</a> | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tags</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">images</a></div>
-   &nbsp; {if="$previousday"} <a href="?do=daily&amp;day={$previousday}"><i class="glyphicon glyphicon-circle-arrow-left"></i>&nbsp;&nbsp; jour précédent</a>{else}{/if} {if="$nextday"} &nbsp;-&nbsp; <a href="?do=daily&amp;day={$nextday}">jour suivant &nbsp;&nbsp;<i class="glyphicon glyphicon-circle-arrow-right"></i></a>{else}{/if}
-   
-        <div class="menu-droit">
-            {if="isLoggedIn()"}
-                <div class="paging_options">
-                <a id="activeOptions" href="?do=tools"><i class="glyphicon glyphicon-cog"></i></a>
-                </div>
-            {/if}
-  
-                <div class="paging_rss">
-                <a href="?do=dailyrss" class="nomobile" title="daily rss feed"><img class="glyphicon" alt="daily rss" src="inc/img/feed-icon-fa.png" title="daily rss feed"></a>
-                </div>
-        </div>
+<div class="am-PagingFlex">
+    <div class="am-PagingFlex-item am-PagingFlex-item1">
+        <a href="?" title="Linklist">linklist</a> | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tagcloud</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">picwall</a>
+    </div>
+    <div class="am-PagingFlex-item am-PagingFlex-item2">
+        &nbsp; {if="$previousday"} <a href="?do=daily&amp;day={$previousday}"><i class="glyphicon glyphicon-circle-arrow-left"></i><span class ="am-PagingPrevNext"> &nbsp;&nbsp; prévious day</span></a>{else}{/if} {if="$nextday"} &nbsp;<span class ="am-PagingPrevNext">-</span>&nbsp; <a href="?do=daily&amp;day={$nextday}"><span class ="am-PagingPrevNext">jnext day &nbsp;&nbsp;</span><i class="glyphicon glyphicon-circle-arrow-right"></i></a>{else}{/if}
+    </div>
+    <div class="am-PagingFlex-item am-PagingFlex-item3">
+        {if="isLoggedIn()"}
+            <span class="am-PagingTools">
+            <a id="activeOptions" href="?do=tools"><i class="glyphicon glyphicon-cog"></i></a>
+            </span>
+        {/if}
+            <span class="am-PagingRss">
+            <a href="?do=dailyrss" class="nomobile" title="daily rss feed"><img class="glyphicon" alt="daily rss" src="inc/img/feed-icon-fa.png" title="daily rss feed"></a>
+            </span>
+    </div>
 </div>
 
     <div class="clear"></div>

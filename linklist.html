@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>{include="includes"}
-    <style TYPE="text/css">#activeLinklist,#activeLinklist i {background-color: #C93030!important;color:#FFFFFF!important;}</style>
-        <link type="text/css" rel="stylesheet" href="inc/awesomplete.css#" />
+    <style TYPE="text/css">#am-menu-linklist,#am-menu-linklist i  {background-color: #C93030!important;color:#FFFFFF!important;}</style>
+    <link type="text/css" rel="stylesheet" href="inc/awesomplete.css#" />
 </head>
 
 <body>
@@ -46,7 +46,6 @@
             {loop="$links"}
             <li{if="$value.class"} class="{$value.class}"{/if}>
                 <a id="{$value.shorturl}"></a>
-                <div class="thumbnail">{$value.url|thumbnail}</div>
                 <div class="linkcontainer">
                     {if="isLoggedIn()"}
                         <div class="linkeditbuttons">
@@ -74,7 +73,12 @@
                     {loop="$value.taglist"}<span class="linktag" title="Add tag"><i class="glyphicon glyphicon-tag"></i>  <a href="?addtag={$value|urlencode}">{$value}</a></span> {/loop}
                     </div>
                 {/if}
-                {if="$value.description"}<div class="linkdescription">{$value.description}</div>{/if}
+                <div class="am-LinkdescriptionContainer">
+                        <div class="thumbnail">{$value.url|thumbnail}</div>
+                        <div class="am-Linkdescription">
+                            {if="$value.description"}{$value.description}{/if}
+                        </div>
+                </div>
                 {if="!$hide_timestamps || isLoggedIn()"}
                     {$updated=$value.updated_timestamp ? 'Edited: '. strftime('%A %d %B %Y', $value.updated_timestamp) : 'Permalink'}
                     <i class="glyphicon glyphicon-time"></i>

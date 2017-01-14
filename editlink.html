@@ -33,8 +33,8 @@
             {/if}
             <input type="submit" value="Save" name="save_edit" class="bigbutton">
             <input type="submit" value="Cancel" name="cancel_edit" class="bigbutton">
-            {if="!$link_is_new && isset($link.id)"}
-              <a href="?delete_link&amp;lf_linkdate={$link.id}&amp;token={$token}"
+            {if="!$link_is_new"}
+              <a href="?delete_link&amp;lf_linkdate={$value.id}&amp;token={$token}"
                  title="" name="delete_link" class="bigbutton"
                  onClick="return confirmDeleteLink();">
                 {'Delete'|t}
