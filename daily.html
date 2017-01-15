@@ -24,7 +24,7 @@
         <a href="?" title="Linklist">linklist</a> | <a href="?do=daily" title="Daily">daily</a> | <a href="?do=tagcloud" title="Tagcloud">tagcloud</a> | <a href="?do=picwall{$searchcrits}" title="Picwall">picwall</a>
     </div>
     <div class="am-PagingFlex-item am-PagingFlex-item2">
-        &nbsp; {if="$previousday"} <a href="?do=daily&amp;day={$previousday}"><i class="glyphicon glyphicon-circle-arrow-left"></i><span class ="am-PagingPrevNext"> &nbsp;&nbsp; prévious day</span></a>{else}{/if} {if="$nextday"} &nbsp;<span class ="am-PagingPrevNext">-</span>&nbsp; <a href="?do=daily&amp;day={$nextday}"><span class ="am-PagingPrevNext">jnext day &nbsp;&nbsp;</span><i class="glyphicon glyphicon-circle-arrow-right"></i></a>{else}{/if}
+        &nbsp; {if="$previousday"} <a href="?do=daily&amp;day={$previousday}"><i class="glyphicon glyphicon-circle-arrow-left"></i><span class ="am-PagingPrevNext"> &nbsp;&nbsp; previous day</span></a>{else}{/if} {if="$nextday"} &nbsp;<span class ="am-PagingPrevNext">-</span>&nbsp; <a href="?do=daily&amp;day={$nextday}"><span class ="am-PagingPrevNext">next day &nbsp;&nbsp;</span><i class="glyphicon glyphicon-circle-arrow-right"></i></a>{else}{/if}
     </div>
     <div class="am-PagingFlex-item am-PagingFlex-item3">
         {if="isLoggedIn()"}

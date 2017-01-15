@@ -2,7 +2,7 @@
 /* Template : AlbinoMouse for Shaarli by Alexis J (http://liens.effingo.be)          */
 /* Sources : https://github.com/alexisju/albinomouse-template                          */
 /*                                                                                                                                       */
-/* Version : 2017014                                                                                                      */
+/* Version : 2017017                                                                                                      */
 
 @font-face {
     font-family: "Open Sans";
@@ -190,7 +190,7 @@ em {
 }
 .am-PagingFlex-item3 {
     text-align:right; 
-    width:33%
+    width:26%
 }
 .am-PagingFlex-item3 .glyphicon {
     opacity:0.7;
@@ -264,7 +264,7 @@ em {
 .searchform, .tagfilter {
     display: block !important;
     margin:0!important;
-    width: 265px !important;
+    width: 267px !important;
 }
 .tagfilter input.bigbutton, .searchform input.bigbutton, .addform input.bigbutton {
     width: 70px;
@@ -332,7 +332,7 @@ a.bigbutton {
     font-size: 11pt;
 }
 .am-PagingPrevNext {
-    display: inherit;
+    display: inline;
 }
 .linksperpage,.addform {
     background-color: #F7F7F7;
