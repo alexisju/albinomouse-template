@@ -254,6 +254,9 @@ em {
 .am-PagingSubmenu:hover {
     display: block;
 }
+.am-PagingRightMenu {
+    margin-left:5px;
+}
 
 /* Search form and tag filter form */
 
@@ -291,6 +294,15 @@ em {
 }
 .tagfilter div.awesomplete {
     width: 190px!important;
+}
+div.awesomplete li:hover {
+    color: #777!important;
+}
+div.awesomplete mark,
+div.awesomplete mark:hover {
+    background: none!important;
+    border-bottom:3px solid #C93030; 
+    color: #777!important;
 }
 .tagfilter #tagfilter_value {
     display: inline;
