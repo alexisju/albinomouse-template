@@ -218,7 +218,7 @@ em {
 .am-PagingSubmenu {
     display: none;
     position: absolute;
-    margin: 14px -71px;
+    margin: 14px -59px;
     border: 1px solid #DDDDDD;
     border-radius: 5px;
     padding: 12px;
@@ -230,25 +230,25 @@ em {
     content: '';
     position: absolute;
     border-style: solid;
-    border-width: 0 15px 16px;
+    border-width: 0 10px 13px;
     border-color: #DDDDDD transparent;
     display: block;
     width: 0;
     z-index: 0;
-    top: -16px;
-    left: 66px;
+    top: -13px;
+    left: 70px;
 }
 .am-PagingSubmenu::after {
     content: '';
     position: absolute;
     border-style: solid;
-    border-width: 0 14px 16px;
+    border-width: 0 10px 13px;
     border-color: #FFFFFF transparent;
     display: block;
     width: 0;
     z-index: 1;
-    top: -15px;
-    left: 67px;
+    top: -12px;
+    left: 70px;
 }
 .am-PagingRightMenu button:focus + .am-PagingSubmenu,
 .am-PagingSubmenu:hover {
@@ -301,7 +301,8 @@ div.awesomplete li:hover {
 div.awesomplete mark,
 div.awesomplete mark:hover {
     background: none!important;
-    border-bottom:3px solid #C93030; 
+    border-bottom:1px solid #C93030; 
+    box-shadow: inset 0 -4px 0 #C93030;
     color: #777!important;
 }
 .tagfilter #tagfilter_value {
@@ -373,7 +374,7 @@ a.bigbutton {
 }
 .linksperpage input {
     padding:2px;
-    width:85px;
+    width:65px;
 }
 
 #am-header {
@@ -561,8 +562,7 @@ a.bigbutton {
     max-width: 980px;
 }
 .linkcontainer {
-    #margin-bottom:2px;
-    padding:10px 0px;
+    padding:10px 5px;
     border-bottom: 1px solid #E0E2E2;
 }
 #linklist li.private {
@@ -1287,6 +1287,9 @@ html {
     padding:0px !important;
 }
 .am-PagingRightMenu > li {
+    margin-left: 10px;
+}
+.am-PagingRss {
     margin-left: 10px;
 }
 div.dailyDate {
