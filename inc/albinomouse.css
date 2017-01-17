@@ -236,7 +236,7 @@ em {
     width: 0;
     z-index: 0;
     top: -13px;
-    left: 70px;
+    left: 59px;
 }
 .am-PagingSubmenu::after {
     content: '';
@@ -248,7 +248,7 @@ em {
     width: 0;
     z-index: 1;
     top: -12px;
-    left: 70px;
+    left: 59px;
 }
 .am-PagingRightMenu button:focus + .am-PagingSubmenu,
 .am-PagingSubmenu:hover {
