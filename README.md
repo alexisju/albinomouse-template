@@ -1,12 +1,12 @@
 #AlbinoMouse for Shaarli#
 
-AlbinoMouse is a template for [ Shaarli](https://github.com/shaarli/Shaarli) maintained by [alexis j](http://liens.effingo.be).
+AlbinoMouse is a template for [Shaarli](https://github.com/shaarli/Shaarli) maintained by [alexis j](http://liens.effingo.be).
 
 Live demo (frontend) : [http://liens.effingo.bej](http://liens.effingo.be)
 
 GitHub : https://github.com/alexisju/albinomouse-template/
 
-Screenshot  with "[am_menu](https://github.com/alexisju/am_menu)" and "[social](https://github.com/alexisju/social)" plugins  :
+Screenshot with "[am_menu](https://github.com/alexisju/am_menu)" and "[social](https://github.com/alexisju/social)" plugins  :
 
 ![screenshot](https://raw.githubusercontent.com/alexisju/albinomouse-template/master/inc/screenshot.png)
 
@@ -35,14 +35,14 @@ Follow this link to know more about [Shaarli templates] (https://github.com/shaa
 
 ### Plugins ###
 
-I highly recommend you to use this template at least with "[AM_Menu](https://github.com/alexisju/am_menu)" plugin. 
+I highly recommend you to use this template at least with "[am_menu](https://github.com/alexisju/am_menu)" plugin. 
 AM Menu (AlbinoMouse menu) add you a default menu that you can also adapt to fit to your needs.
 
 You can also use this follwing plugin developped for AlbinoMouse template : 
 
- - [Social](https://github.com/alexisju/social) : share easily your links on social networks ;
- - [Qrcode](https://github.com/alexisju/am_qrcode) : an alternative QR Code plugin ;
- - [Go to top](https://github.com/alexisju/gototop) : add a "go to top" link.
+ - [social](https://github.com/alexisju/social) : share easily your links on social networks ;
+ - [am_qrcode](https://github.com/alexisju/am_qrcode) : an alternative QR Code plugin ;
+ - [gototop](https://github.com/alexisju/gototop) : add a "go to top" link.
 
 ### Licences ###
 
@@ -56,6 +56,6 @@ This template is directly inspired by [AlbinoMouse for WordPress](https://wpzoo.
 
 ------------------------------------------------------------------------------
 
-Shaarli Material was tested and validated on Shaarli 0.8.2.
+Albinomouse template was tested and validated on Shaarli 0.8.3.
 
 You can download Shaarli via the Github project page : https://github.com/shaarli/Shaarli
