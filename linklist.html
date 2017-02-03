@@ -20,7 +20,7 @@
     </div>
 
     {include="linklist.paging"}
-    
+
 <div class="clear"></div>
 
     {if="count($links)==0"}
@@ -53,7 +53,7 @@
                                 <input type="hidden" name="edit_link" value="{$value.id}">
                                 <input type="image" alt="Edit" src="inc/img/edit_icon.png" title="Edit" class="button_edit">
                             </form><br>
-                            <form method="GET" class="buttoneditform">
+                            <form method="POST" class="buttoneditform">
                                 <input type="hidden" name="lf_linkdate" value="{$value.id}">
                                 <input type="hidden" name="token" value="{$token}">
                                 <input type="hidden" name="delete_link">
