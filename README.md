@@ -2,7 +2,7 @@
 
 AlbinoMouse is a template for [Shaarli](https://github.com/shaarli/Shaarli) maintained by [alexis j](http://liens.effingo.be).
 
-Live demo (frontend) : [http://liens.effingo.bej](http://liens.effingo.be)
+Live demo (frontend) : [https://liens.effingo.be](https://liens.effingo.be)
 
 GitHub : https://github.com/alexisju/albinomouse-template/
 
